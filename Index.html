@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>RANA SOLAR TRADERS — Complete Solar Solutions</title>
     
     <!-- ===== SEO META TAGS ===== -->
@@ -94,6 +93,8 @@
             user-select: none;
             -webkit-user-select: none;
             cursor: default;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         /* ===== LANGUAGE SWITCHER ===== */
@@ -171,297 +172,350 @@
         .navbar {
             position: fixed; top: 1.2rem; left: 50%; transform: translateX(-50%); z-index: 1000;
             background: rgba(10,10,10,0.7); backdrop-filter: blur(24px); border: 1px solid var(--border-glass);
-            border-radius: 80px; padding: 0.5rem 1.8rem; display: flex; justify-content: space-between;
+            border-radius: 80px; padding: 0.5rem 1.2rem; display: flex; justify-content: space-between;
             align-items: center; width: 92%; max-width: 1200px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); transition: 0.3s;
         }
-        .logo-3d { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; }
-        .logo-3d .icon-3d { font-size: 1.8rem; color: var(--gold); filter: drop-shadow(0 0 20px var(--gold-glow)); }
-        .logo-3d .brand-text { font-family: 'Orbitron', monospace; font-weight: 800; font-size: 1.2rem; letter-spacing: 1px; }
+        .logo-3d { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; flex-shrink: 0; }
+        .logo-3d .icon-3d { font-size: 1.6rem; color: var(--gold); filter: drop-shadow(0 0 20px var(--gold-glow)); line-height: 1; }
+        .logo-3d .brand-text { font-family: 'Orbitron', monospace; font-weight: 800; font-size: 1rem; letter-spacing: 1px; line-height: 1.1; }
         .logo-3d .brand-text span { color: var(--gold); }
-        .logo-3d .sub-tag { font-size: 0.55rem; font-weight: 400; color: var(--text-muted); letter-spacing: 2px; display: block; margin-top: -2px; text-transform: uppercase; }
+        .logo-3d .sub-tag { font-size: 0.45rem; font-weight: 400; color: var(--text-muted); letter-spacing: 1.5px; display: block; margin-top: -1px; text-transform: uppercase; }
 
-        .nav-links { display: flex; gap: 0.5rem; list-style: none; align-items: center; flex-wrap: wrap; }
+        .nav-links { display: flex; gap: 0.3rem; list-style: none; align-items: center; flex-wrap: wrap; }
         .nav-links a {
-            color: var(--text-muted); text-decoration: none; font-size: 0.8rem; font-weight: 500;
-            padding: 0.4rem 0.8rem; border-radius: 40px; transition: 0.3s; cursor: pointer;
+            color: var(--text-muted); text-decoration: none; font-size: 0.7rem; font-weight: 500;
+            padding: 0.3rem 0.6rem; border-radius: 40px; transition: 0.3s; cursor: pointer;
             font-family: 'Inter', sans-serif; letter-spacing: 0.3px;
+            white-space: nowrap;
         }
         .nav-links a:hover, .nav-links a.active { color: #fff; background: rgba(251,191,36,0.12); box-shadow: 0 0 30px rgba(251,191,36,0.05); }
-        .nav-links .btn-cta { background: var(--gold); color: #0a0a0a; font-weight: 700; padding: 0.4rem 1.4rem; box-shadow: 0 0 40px rgba(251,191,36,0.2); }
+        .nav-links .btn-cta { background: var(--gold); color: #0a0a0a; font-weight: 700; padding: 0.3rem 1rem; box-shadow: 0 0 40px rgba(251,191,36,0.2); }
         .nav-links .btn-cta:hover { transform: scale(1.05); box-shadow: 0 0 60px rgba(251,191,36,0.4); background: #fcd34d; }
 
         /* Dropdown for Industry */
         .dropdown-industry { position: relative; display: inline-block; }
         .dropdown-industry .dropbtn { 
-            color: var(--text-muted); text-decoration: none; font-size: 0.8rem; font-weight: 500;
-            padding: 0.4rem 0.8rem; border-radius: 40px; transition: 0.3s; cursor: pointer;
+            color: var(--text-muted); text-decoration: none; font-size: 0.7rem; font-weight: 500;
+            padding: 0.3rem 0.6rem; border-radius: 40px; transition: 0.3s; cursor: pointer;
             font-family: 'Inter', sans-serif; letter-spacing: 0.3px; background: none; border: none;
+            white-space: nowrap;
         }
         .dropdown-industry .dropbtn:hover { color: #fff; background: rgba(251,191,36,0.12); }
         .dropdown-content {
-            display: none; position: absolute; top: 100%; left: 0; min-width: 220px;
+            display: none; position: absolute; top: 100%; left: 0; min-width: 200px;
             background: rgba(10,10,10,0.95); backdrop-filter: blur(16px); border: 1px solid var(--border-glass);
             border-radius: var(--radius-lg); padding: 0.5rem 0; z-index: 1001; box-shadow: 0 20px 60px rgba(0,0,0,0.6);
         }
         .dropdown-content a {
-            color: var(--text-muted); padding: 0.5rem 1.2rem; display: block; font-size: 0.8rem;
+            color: var(--text-muted); padding: 0.5rem 1.2rem; display: block; font-size: 0.75rem;
             text-decoration: none; transition: 0.2s; border-radius: 0;
+            white-space: nowrap;
         }
         .dropdown-content a:hover { background: rgba(251,191,36,0.1); color: #fff; }
         .dropdown-industry:hover .dropdown-content { display: block; }
 
-        .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
-        .hamburger span { width: 26px; height: 2px; background: #fff; border-radius: 4px; transition: 0.3s; }
+        .hamburger { display: none; flex-direction: column; gap: 4px; background: none; border: none; cursor: pointer; padding: 0.2rem; }
+        .hamburger span { width: 22px; height: 2px; background: #fff; border-radius: 4px; transition: 0.3s; }
 
         /* ===== HERO ===== */
         .hero {
             position: relative; z-index: 1; min-height: 100vh;
             display: flex; align-items: center; justify-content: center;
-            padding: 8rem 2rem 4rem; text-align: center; pointer-events: none;
+            padding: 7rem 1.5rem 3rem; text-align: center; pointer-events: none;
         }
-        .hero-content { pointer-events: auto; max-width: 900px; }
+        .hero-content { pointer-events: auto; max-width: 900px; width: 100%; }
         .hero-content .glow-badge {
             display: inline-block; background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.2);
-            padding: 0.3rem 1.8rem; border-radius: 60px; font-size: 0.75rem; font-weight: 600;
-            color: var(--gold); letter-spacing: 3px; text-transform: uppercase; backdrop-filter: blur(8px);
-            margin-bottom: 2rem; font-family: 'Orbitron', monospace;
+            padding: 0.3rem 1.5rem; border-radius: 60px; font-size: 0.65rem; font-weight: 600;
+            color: var(--gold); letter-spacing: 2px; text-transform: uppercase; backdrop-filter: blur(8px);
+            margin-bottom: 1.5rem; font-family: 'Orbitron', monospace;
         }
         .hero-content h1 {
-            font-family: 'Orbitron', monospace; font-size: 4.5rem; font-weight: 900; line-height: 1.05;
+            font-family: 'Orbitron', monospace; font-size: clamp(2.2rem, 8vw, 4.5rem); font-weight: 900; line-height: 1.05;
             background: linear-gradient(135deg, #fff 30%, var(--gold) 60%, var(--purple) 100%);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             filter: drop-shadow(0 0 80px rgba(251,191,36,0.15)); letter-spacing: -1px;
         }
         .hero-content .sub-title {
-            font-size: 1.2rem; color: var(--text-muted); max-width: 700px;
-            margin: 1.5rem auto 2.5rem; line-height: 1.8; font-weight: 300; letter-spacing: 0.5px;
+            font-size: clamp(0.95rem, 2.5vw, 1.2rem); color: var(--text-muted); max-width: 700px;
+            margin: 1.2rem auto 2rem; line-height: 1.7; font-weight: 300; letter-spacing: 0.3px;
+            padding: 0 0.5rem;
         }
-        .hero-buttons { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; }
+        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
         .btn-primary-3d {
             background: linear-gradient(135deg, var(--gold), #d4a017); color: #0a0a0a;
-            padding: 0.9rem 2.8rem; border-radius: 60px; font-weight: 700; font-size: 1.05rem;
-            text-decoration: none; display: inline-flex; align-items: center; gap: 0.8rem;
+            padding: 0.8rem 2rem; border-radius: 60px; font-weight: 700; font-size: clamp(0.85rem, 2vw, 1.05rem);
+            text-decoration: none; display: inline-flex; align-items: center; gap: 0.6rem;
             transition: 0.4s; box-shadow: 0 0 60px rgba(251,191,36,0.2);
             font-family: 'Inter', sans-serif; border: none; cursor: pointer;
         }
-        .btn-primary-3d:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 20px 80px rgba(251,191,36,0.4); }
+        .btn-primary-3d:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 20px 80px rgba(251,191,36,0.4); }
         .btn-outline-3d {
-            background: rgba(255,255,255,0.04); color: #fff; padding: 0.9rem 2.8rem; border-radius: 60px;
-            font-weight: 600; font-size: 1.05rem; text-decoration: none; display: inline-flex;
-            align-items: center; gap: 0.8rem; border: 1px solid var(--border-glass); transition: 0.4s;
+            background: rgba(255,255,255,0.04); color: #fff; padding: 0.8rem 2rem; border-radius: 60px;
+            font-weight: 600; font-size: clamp(0.85rem, 2vw, 1.05rem); text-decoration: none; display: inline-flex;
+            align-items: center; gap: 0.6rem; border: 1px solid var(--border-glass); transition: 0.4s;
             backdrop-filter: blur(8px); font-family: 'Inter', sans-serif; cursor: pointer;
         }
-        .btn-outline-3d:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-4px); box-shadow: 0 0 60px rgba(251,191,36,0.05); }
+        .btn-outline-3d:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-3px); box-shadow: 0 0 60px rgba(251,191,36,0.05); }
 
         .hero-stats-3d {
-            display: flex; gap: 4rem; justify-content: center; margin-top: 4rem;
-            padding-top: 2.5rem; border-top: 1px solid var(--border-glass); flex-wrap: wrap;
+            display: flex; gap: clamp(1.5rem, 5vw, 4rem); justify-content: center; margin-top: 3rem;
+            padding-top: 2rem; border-top: 1px solid var(--border-glass); flex-wrap: wrap;
         }
-        .hero-stats-3d .stat h3 { font-family: 'Orbitron', monospace; font-size: 2.5rem; font-weight: 800; color: var(--gold); text-shadow: 0 0 40px rgba(251,191,36,0.2); }
-        .hero-stats-3d .stat p { color: var(--text-muted); font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; font-weight: 400; }
+        .hero-stats-3d .stat h3 { font-family: 'Orbitron', monospace; font-size: clamp(1.5rem, 4vw, 2.5rem); font-weight: 800; color: var(--gold); text-shadow: 0 0 40px rgba(251,191,36,0.2); }
+        .hero-stats-3d .stat p { color: var(--text-muted); font-size: clamp(0.6rem, 1.5vw, 0.85rem); letter-spacing: 1px; text-transform: uppercase; font-weight: 400; }
 
         /* ===== SECTIONS ===== */
-        .section { position: relative; z-index: 1; padding: 5rem 2rem; max-width: 1300px; margin: 0 auto; }
-        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section { position: relative; z-index: 1; padding: 3rem 1.5rem; max-width: 1300px; margin: 0 auto; }
+        .section-header { text-align: center; margin-bottom: 2.5rem; }
         .section-header .tag {
-            display: inline-block; font-family: 'Orbitron', monospace; font-size: 0.7rem;
-            color: var(--gold); letter-spacing: 4px; text-transform: uppercase;
-            background: rgba(251,191,36,0.08); padding: 0.2rem 1.2rem; border-radius: 40px;
-            border: 1px solid rgba(251,191,36,0.1); margin-bottom: 0.8rem;
+            display: inline-block; font-family: 'Orbitron', monospace; font-size: 0.6rem;
+            color: var(--gold); letter-spacing: 3px; text-transform: uppercase;
+            background: rgba(251,191,36,0.08); padding: 0.2rem 1rem; border-radius: 40px;
+            border: 1px solid rgba(251,191,36,0.1); margin-bottom: 0.6rem;
         }
-        .section-header h2 { font-family: 'Orbitron', monospace; font-size: 3.2rem; font-weight: 800; letter-spacing: -0.5px; }
+        .section-header h2 { font-family: 'Orbitron', monospace; font-size: clamp(1.8rem, 5vw, 3.2rem); font-weight: 800; letter-spacing: -0.5px; }
         .section-header h2 span { color: var(--gold); text-shadow: 0 0 40px rgba(251,191,36,0.1); }
-        .section-header p { color: var(--text-muted); max-width: 550px; margin: 0.8rem auto 0; font-size: 1.05rem; font-weight: 300; }
+        .section-header p { color: var(--text-muted); max-width: 550px; margin: 0.5rem auto 0; font-size: clamp(0.9rem, 2vw, 1.05rem); font-weight: 300; }
 
         /* ---- Glass Cards ---- */
         .glass-card {
             background: var(--glass); backdrop-filter: blur(16px); border: 1px solid var(--border-glass);
-            border-radius: var(--radius-lg); padding: 2rem 1.8rem;
+            border-radius: var(--radius-lg); padding: 1.5rem 1.2rem;
             transition: 0.5s cubic-bezier(0.23,1,0.32,1); height: 100%;
         }
-        .glass-card:hover { transform: translateY(-10px) scale(1.02); border-color: rgba(251,191,36,0.2); box-shadow: 0 30px 80px rgba(0,0,0,0.4); }
+        .glass-card:hover { transform: translateY(-6px) scale(1.01); border-color: rgba(251,191,36,0.2); box-shadow: 0 30px 80px rgba(0,0,0,0.4); }
 
         /* ---- Branches (Industry Section) ---- */
-        .branch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; }
+        .branch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; }
         .branch-grid .glass-card { text-align: center; }
-        .branch-grid .glass-card .branch-icon { font-size: 2.8rem; color: var(--gold); margin-bottom: 0.8rem; }
-        .branch-grid .glass-card h3 { font-size: 1.2rem; font-weight: 700; }
-        .branch-grid .glass-card .branch-type { color: var(--gold); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; }
-        .branch-grid .glass-card .branch-addr { color: var(--text-muted); font-size: 0.9rem; margin: 0.3rem 0; }
-        .branch-grid .glass-card .branch-contact-row { display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem; }
-        .branch-grid .glass-card .branch-contact-row a { color: var(--text-muted); font-size: 0.9rem; text-decoration: none; transition: 0.3s; }
+        .branch-grid .glass-card .branch-icon { font-size: 2.2rem; color: var(--gold); margin-bottom: 0.6rem; }
+        .branch-grid .glass-card h3 { font-size: clamp(1rem, 2.5vw, 1.2rem); font-weight: 700; }
+        .branch-grid .glass-card .branch-type { color: var(--gold); font-weight: 600; font-size: 0.8rem; margin-bottom: 0.4rem; }
+        .branch-grid .glass-card .branch-addr { color: var(--text-muted); font-size: 0.85rem; margin: 0.2rem 0; }
+        .branch-grid .glass-card .branch-contact-row { display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.4rem; }
+        .branch-grid .glass-card .branch-contact-row a { color: var(--text-muted); font-size: 0.8rem; text-decoration: none; transition: 0.3s; }
         .branch-grid .glass-card .branch-contact-row a:hover { color: var(--gold); }
         .branch-grid .glass-card .branch-contact-row .wa-link { color: #25D366; }
         .branch-grid .glass-card .branch-contact-row .wa-link:hover { color: #1ebe5c; }
-        .branch-grid .glass-card .branch-map { margin-top: 0.8rem; }
-        .branch-grid .glass-card .branch-map a { color: var(--gold); text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .branch-grid .glass-card .branch-map { margin-top: 0.6rem; }
+        .branch-grid .glass-card .branch-map a { color: var(--gold); text-decoration: none; font-size: 0.8rem; transition: 0.3s; }
         .branch-grid .glass-card .branch-map a:hover { color: #fff; }
 
         /* ---- Services ---- */
-        .category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 2rem; }
+        .category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 1.5rem; }
         .category-grid .glass-card { text-align: center; cursor: default; }
-        .category-grid .glass-card .icon { font-size: 2.8rem; color: var(--gold); margin-bottom: 0.8rem; filter: drop-shadow(0 0 20px rgba(251,191,36,0.15)); }
-        .category-grid .glass-card h3 { font-size: 1.1rem; font-weight: 600; }
-        .category-grid .glass-card p { color: var(--text-muted); font-size: 0.85rem; margin: 0.3rem 0 0.8rem; }
-        .category-grid .glass-card .badge { display: inline-block; background: var(--gold); color: #0a0a0a; font-size: 0.65rem; font-weight: 700; padding: 0.2rem 1rem; border-radius: 30px; letter-spacing: 0.5px; }
+        .category-grid .glass-card .icon { font-size: 2.2rem; color: var(--gold); margin-bottom: 0.6rem; filter: drop-shadow(0 0 20px rgba(251,191,36,0.15)); }
+        .category-grid .glass-card h3 { font-size: 1rem; font-weight: 600; }
+        .category-grid .glass-card p { color: var(--text-muted); font-size: 0.8rem; margin: 0.2rem 0 0.6rem; }
+        .category-grid .glass-card .badge { display: inline-block; background: var(--gold); color: #0a0a0a; font-size: 0.6rem; font-weight: 700; padding: 0.15rem 0.8rem; border-radius: 30px; letter-spacing: 0.5px; }
 
         /* ---- Team ---- */
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 2.5rem; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1.5rem; }
         .team-grid .glass-card { text-align: center; }
         .team-grid .glass-card .avatar { 
-            width: 100px; height: 100px; border-radius: 50%; 
+            width: 80px; height: 80px; border-radius: 50%; 
             background: linear-gradient(135deg, var(--gold), var(--gold-dark)); 
-            margin: 0 auto 1.2rem; display: flex; align-items: center; justify-content: center; 
-            font-size: 2.8rem; color: #0a0a0a; font-weight: 700; 
+            margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; 
+            font-size: 2rem; color: #0a0a0a; font-weight: 700; 
             box-shadow: 0 0 60px rgba(251,191,36,0.1);
             overflow: hidden;
         }
         .team-grid .glass-card .avatar img { width: 100%; height: 100%; object-fit: cover; }
-        .team-grid .glass-card h4 { font-size: 1.1rem; }
-        .team-grid .glass-card .role { color: var(--gold); font-size: 0.85rem; font-weight: 600; margin: 0.2rem 0 0.3rem; }
-        .team-grid .glass-card .role-desc { color: var(--text-muted); font-size: 0.8rem; line-height: 1.4; margin-bottom: 0.5rem; }
-        .team-grid .glass-card .phone { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem; }
-        .team-grid .glass-card .phone i { color: var(--gold); margin-right: 0.4rem; }
-        .team-socials { display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.8rem; }
+        .team-grid .glass-card h4 { font-size: 1rem; }
+        .team-grid .glass-card .role { color: var(--gold); font-size: 0.8rem; font-weight: 600; margin: 0.15rem 0 0.2rem; }
+        .team-grid .glass-card .role-desc { color: var(--text-muted); font-size: 0.75rem; line-height: 1.4; margin-bottom: 0.4rem; }
+        .team-grid .glass-card .phone { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.4rem; }
+        .team-grid .glass-card .phone i { color: var(--gold); margin-right: 0.3rem; }
+        .team-socials { display: flex; justify-content: center; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.6rem; }
         .team-socials a { 
             color: var(--text-muted); background: rgba(255,255,255,0.04); 
-            width: 38px; height: 38px; border-radius: 50%; display: flex; 
+            width: 34px; height: 34px; border-radius: 50%; display: flex; 
             align-items: center; justify-content: center; transition: 0.3s; text-decoration: none; 
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
-        .team-socials a:hover { color: #fff; background: var(--gold); transform: scale(1.15); }
+        .team-socials a:hover { color: #fff; background: var(--gold); transform: scale(1.12); }
         .team-socials .wa-btn { background: #25D366; color: #fff !important; }
-        .team-socials .wa-btn:hover { background: #1ebe5c !important; transform: scale(1.15); }
+        .team-socials .wa-btn:hover { background: #1ebe5c !important; transform: scale(1.12); }
 
         /* ---- Testimonials ---- */
-        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 1.5rem; }
         .testimonial-grid .glass-card { text-align: center; }
-        .testimonial-grid .glass-card .stars { color: var(--gold); font-size: 1.2rem; margin-bottom: 0.8rem; }
-        .testimonial-grid .glass-card .quote { color: var(--text-muted); font-style: italic; font-size: 0.95rem; line-height: 1.6; }
-        .testimonial-grid .glass-card .client { margin-top: 0.8rem; color: #fff; font-weight: 600; }
-        .testimonial-grid .glass-card .client-role { color: var(--text-muted); font-size: 0.8rem; }
+        .testimonial-grid .glass-card .stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 0.6rem; }
+        .testimonial-grid .glass-card .quote { color: var(--text-muted); font-style: italic; font-size: 0.9rem; line-height: 1.6; }
+        .testimonial-grid .glass-card .client { margin-top: 0.6rem; color: #fff; font-weight: 600; font-size: 0.9rem; }
+        .testimonial-grid .glass-card .client-role { color: var(--text-muted); font-size: 0.75rem; }
 
         /* ---- Blog ---- */
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 1.5rem; }
         .blog-grid .glass-card { overflow: hidden; padding: 0; }
-        .blog-grid .glass-card .blog-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid var(--border-glass); background: #1a1a2e; }
-        .blog-grid .glass-card .blog-body { padding: 1.5rem; }
-        .blog-grid .glass-card .blog-body h4 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-        .blog-grid .glass-card .blog-body p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; }
-        .blog-grid .glass-card .blog-body a { color: var(--gold); text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .blog-grid .glass-card .blog-img { width: 100%; height: 160px; object-fit: cover; border-bottom: 1px solid var(--border-glass); background: #1a1a2e; }
+        .blog-grid .glass-card .blog-body { padding: 1.2rem; }
+        .blog-grid .glass-card .blog-body h4 { font-size: 1rem; margin-bottom: 0.3rem; }
+        .blog-grid .glass-card .blog-body p { color: var(--text-muted); font-size: 0.8rem; line-height: 1.6; }
+        .blog-grid .glass-card .blog-body a { color: var(--gold); text-decoration: none; font-weight: 600; transition: 0.3s; font-size: 0.85rem; }
         .blog-grid .glass-card .blog-body a:hover { color: #fff; }
 
         /* ---- FAQ ---- */
         .faq-grid { max-width: 800px; margin: 0 auto; }
-        .faq-item { background: var(--glass); backdrop-filter: blur(16px); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); margin-bottom: 1rem; overflow: hidden; }
-        .faq-item .faq-question { width: 100%; padding: 1.2rem 1.8rem; background: transparent; border: none; color: #fff; font-size: 1.05rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.3s; font-family: 'Inter', sans-serif; }
+        .faq-item { background: var(--glass); backdrop-filter: blur(16px); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); margin-bottom: 0.8rem; overflow: hidden; }
+        .faq-item .faq-question { width: 100%; padding: 1rem 1.2rem; background: transparent; border: none; color: #fff; font-size: clamp(0.9rem, 2vw, 1.05rem); font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.3s; font-family: 'Inter', sans-serif; }
         .faq-item .faq-question:hover { color: var(--gold); }
         .faq-item .faq-question i { transition: 0.3s; color: var(--gold); }
         .faq-item .faq-question.active i { transform: rotate(180deg); }
-        .faq-item .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; padding: 0 1.8rem; color: var(--text-muted); line-height: 1.6; }
-        .faq-item .faq-answer.open { max-height: 300px; padding: 0 1.8rem 1.5rem; }
+        .faq-item .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; padding: 0 1.2rem; color: var(--text-muted); line-height: 1.6; font-size: 0.9rem; }
+        .faq-item .faq-answer.open { max-height: 300px; padding: 0 1.2rem 1.2rem; }
 
         /* ---- Contact ---- */
-        .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
         .contact-form input, .contact-form textarea, .contact-form select {
-            width: 100%; padding: 0.9rem 1.2rem; background: var(--glass); border: 1px solid var(--border-glass);
-            border-radius: var(--radius-lg); color: #fff; font-size: 1rem; margin-bottom: 1rem;
+            width: 100%; padding: 0.8rem 1rem; background: var(--glass); border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg); color: #fff; font-size: 0.95rem; margin-bottom: 0.8rem;
             transition: 0.3s; font-family: 'Inter', sans-serif; backdrop-filter: blur(8px);
         }
         .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
             border-color: var(--gold); outline: none; box-shadow: 0 0 40px rgba(251,191,36,0.05);
         }
-        .contact-form textarea { min-height: 120px; resize: vertical; }
+        .contact-form textarea { min-height: 100px; resize: vertical; }
         .contact-form button {
-            background: var(--gold); color: #0a0a0a; border: none; padding: 0.9rem;
-            border-radius: 60px; font-weight: 700; font-size: 1rem; cursor: pointer;
+            background: var(--gold); color: #0a0a0a; border: none; padding: 0.8rem;
+            border-radius: 60px; font-weight: 700; font-size: 0.95rem; cursor: pointer;
             transition: 0.3s; width: 100%; font-family: 'Inter', sans-serif;
         }
         .contact-form button:hover { transform: scale(1.02); box-shadow: 0 10px 50px rgba(251,191,36,0.3); }
 
-        .contact-info .item { display: flex; align-items: center; gap: 1rem; color: var(--text-muted); margin-bottom: 1.2rem; }
-        .contact-info .item i { font-size: 1.4rem; color: var(--gold); width: 32px; text-align: center; }
+        .contact-info .item { display: flex; align-items: center; gap: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem; }
+        .contact-info .item i { font-size: 1.2rem; color: var(--gold); width: 28px; text-align: center; }
         .contact-info .item a { color: #fff; text-decoration: none; transition: 0.3s; }
         .contact-info .item a:hover { color: var(--gold); }
         .contact-info .map-placeholder { 
             background: rgba(255,255,255,0.05); border-radius: var(--radius-lg); 
-            padding: 1.5rem; text-align: center; border: 1px solid var(--border-glass); 
-            margin-top: 1rem; overflow: hidden;
+            padding: 1rem; text-align: center; border: 1px solid var(--border-glass); 
+            margin-top: 0.8rem; overflow: hidden;
         }
         .contact-info .map-placeholder iframe {
             width: 100%;
-            height: 250px;
+            height: 200px;
             border: 0;
             border-radius: var(--radius-lg);
-            margin-top: 0.8rem;
+            margin-top: 0.5rem;
         }
-        .newsletter-box { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-top: 0.5rem; }
-        .newsletter-box input { flex: 1; padding: 0.8rem 1.2rem; background: var(--glass); border: 1px solid var(--border-glass); border-radius: 60px; color: #fff; min-width: 160px; font-family: 'Inter', sans-serif; }
-        .newsletter-box button { background: var(--gold); color: #0a0a0a; border: none; padding: 0.8rem 2rem; border-radius: 60px; font-weight: 700; cursor: pointer; transition: 0.3s; font-family: 'Inter', sans-serif; }
+        .newsletter-box { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.4rem; }
+        .newsletter-box input { flex: 1; padding: 0.7rem 1rem; background: var(--glass); border: 1px solid var(--border-glass); border-radius: 60px; color: #fff; min-width: 140px; font-family: 'Inter', sans-serif; font-size: 0.9rem; }
+        .newsletter-box button { background: var(--gold); color: #0a0a0a; border: none; padding: 0.7rem 1.5rem; border-radius: 60px; font-weight: 700; cursor: pointer; transition: 0.3s; font-family: 'Inter', sans-serif; font-size: 0.9rem; }
         .newsletter-box button:hover { transform: scale(1.05); }
 
         /* ===== FOOTER ===== */
-        .footer { position: relative; z-index: 1; padding: 3rem 2rem 1.5rem; border-top: 1px solid var(--border-glass); background: rgba(10,10,10,0.6); backdrop-filter: blur(16px); }
-        .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
-        .footer-socials { display: flex; gap: 1.2rem; }
-        .footer-socials a { color: var(--text-muted); font-size: 1.4rem; transition: 0.3s; }
-        .footer-socials a:hover { color: var(--gold); transform: scale(1.15); }
-        .footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
-        .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: 0.3s; cursor: pointer; }
+        .footer { position: relative; z-index: 1; padding: 2rem 1.5rem 1.2rem; border-top: 1px solid var(--border-glass); background: rgba(10,10,10,0.6); backdrop-filter: blur(16px); }
+        .footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.5rem; }
+        .footer-socials { display: flex; gap: 1rem; }
+        .footer-socials a { color: var(--text-muted); font-size: 1.2rem; transition: 0.3s; }
+        .footer-socials a:hover { color: var(--gold); transform: scale(1.12); }
+        .footer-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.75rem; transition: 0.3s; cursor: pointer; }
         .footer-links a:hover { color: var(--gold); }
-        .footer-bottom { border-top: 1px solid var(--border-glass); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; color: var(--text-muted); }
+        .footer-bottom { border-top: 1px solid var(--border-glass); padding-top: 1.2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem; font-size: 0.7rem; color: var(--text-muted); }
         .footer-bottom a { color: var(--gold); text-decoration: none; font-weight: 600; }
-        .footer-bottom .protected { color: #4b5563; font-size: 0.7rem; letter-spacing: 1px; }
+        .footer-bottom .protected { color: #4b5563; font-size: 0.65rem; letter-spacing: 1px; }
 
         /* ===== MODALS ===== */
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(20px); z-index: 99997; display: none; justify-content: center; align-items: center; padding: 2rem; }
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(20px); z-index: 99997; display: none; justify-content: center; align-items: center; padding: 1.5rem; }
         .modal-overlay.open { display: flex; }
-        .modal-box { background: #0d111a; border: 1px solid var(--border-glass); border-radius: var(--radius-xl); max-width: 700px; width: 100%; max-height: 80vh; overflow-y: auto; padding: 2.5rem; color: var(--text-muted); position: relative; animation: modalFade 0.5s ease; }
+        .modal-box { background: #0d111a; border: 1px solid var(--border-glass); border-radius: var(--radius-xl); max-width: 700px; width: 100%; max-height: 80vh; overflow-y: auto; padding: 2rem; color: var(--text-muted); position: relative; animation: modalFade 0.5s ease; }
         @keyframes modalFade { from{opacity:0;transform:scale(0.9) translateY(30px)} to{opacity:1;transform:scale(1) translateY(0)} }
-        .modal-box h2 { font-family: 'Orbitron', monospace; color: #fff; margin-bottom: 1.2rem; font-size: 1.8rem; }
-        .modal-box p, .modal-box li { line-height: 1.8; margin-bottom: 0.8rem; }
+        .modal-box h2 { font-family: 'Orbitron', monospace; color: #fff; margin-bottom: 1rem; font-size: 1.5rem; }
+        .modal-box p, .modal-box li { line-height: 1.8; margin-bottom: 0.6rem; font-size: 0.95rem; }
         .modal-box ul { padding-left: 1.5rem; }
-        .modal-close { position: sticky; top: 0; float: right; background: none; border: none; color: var(--gold); font-size: 2.2rem; cursor: pointer; transition: 0.3s; z-index: 1; }
+        .modal-close { position: sticky; top: 0; float: right; background: none; border: none; color: var(--gold); font-size: 2rem; cursor: pointer; transition: 0.3s; z-index: 1; }
         .modal-close:hover { transform: rotate(90deg); }
 
         /* ===== WHATSAPP FLOAT ===== */
         .whatsapp-float {
-            position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
-            background: #25D366; color: #fff; width: 64px; height: 64px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center; font-size: 2.6rem;
+            position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999;
+            background: #25D366; color: #fff; width: 56px; height: 56px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 2.2rem;
             text-decoration: none; box-shadow: 0 8px 40px rgba(37,211,102,0.4);
             transition: 0.4s; animation: floatPulse 3s ease-in-out infinite;
         }
-        .whatsapp-float:hover { transform: scale(1.12); box-shadow: 0 8px 60px rgba(37,211,102,0.6); }
-        @keyframes floatPulse { 0%,100%{transform:scale(1)}50%{transform:scale(1.06)} }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 8px 60px rgba(37,211,102,0.6); }
+        @keyframes floatPulse { 0%,100%{transform:scale(1)}50%{transform:scale(1.05)} }
 
         /* ===== SCROLL REVEAL ===== */
-        .reveal { opacity: 0; transform: translateY(50px) scale(0.96); transition: opacity 1s ease, transform 1s ease; }
+        .reveal { opacity: 0; transform: translateY(40px) scale(0.97); transition: opacity 0.8s ease, transform 0.8s ease; }
         .reveal.visible { opacity: 1; transform: translateY(0) scale(1); }
 
         /* ===== RESPONSIVE ===== */
-        @media (max-width:1024px){ .hero-content h1{font-size:4rem} .contact-wrapper{grid-template-columns:1fr} .hero-stats-3d{gap:2rem} }
-        @media (max-width:768px){
-            .navbar{padding:0.5rem 1.2rem;width:96%;top:0.8rem;border-radius:40px}
-            .nav-links{display:none;flex-direction:column;background:rgba(10,10,10,0.98);padding:1.5rem;border-radius:var(--radius-lg);position:absolute;top:100%;left:0.5rem;right:0.5rem;gap:0.6rem;border:1px solid var(--border-glass);backdrop-filter:blur(20px)}
-            .nav-links.open{display:flex}
-            .hamburger{display:flex}
-            .hero-content h1{font-size:2.8rem}
-            .hero-content .sub-title{font-size:1rem}
-            .hero-stats-3d .stat h3{font-size:1.8rem}
-            .section-header h2{font-size:2.2rem}
-            .category-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
-            .team-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-            .footer-top{flex-direction:column;align-items:flex-start}
-            .modal-box{padding:1.5rem;margin:1rem}
-            #cookie-banner{padding:0.8rem 1.5rem;border-radius:30px;bottom:1rem;gap:0.8rem}
-            .dropdown-content { position: static; }
-            .branch-grid { grid-template-columns: 1fr; }
-            .lang-switcher { margin-left: 0; }
+        @media (max-width:1024px){ 
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .hero-stats-3d { gap: 2rem; }
+            .branch-grid { grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); }
         }
-        @media (max-width:480px){ .hero-content h1{font-size:2.2rem} .hero-stats-3d{flex-wrap:wrap;gap:1.2rem} .hero-stats-3d .stat h3{font-size:1.5rem} .btn-primary-3d,.btn-outline-3d{padding:0.7rem 1.8rem;font-size:0.9rem} }
+        @media (max-width:768px){
+            .navbar { padding: 0.4rem 1rem; width: 95%; top: 0.6rem; border-radius: 40px; }
+            .nav-links { 
+                display: none; 
+                flex-direction: column; 
+                background: rgba(10,10,10,0.98); 
+                padding: 1.2rem; 
+                border-radius: var(--radius-lg); 
+                position: absolute; 
+                top: 100%; 
+                left: 0.5rem; 
+                right: 0.5rem; 
+                gap: 0.4rem; 
+                border: 1px solid var(--border-glass); 
+                backdrop-filter: blur(20px);
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+            .nav-links.open { display: flex; }
+            .nav-links a { font-size: 0.9rem; padding: 0.5rem 1rem; width: 100%; text-align: center; }
+            .nav-links .btn-cta { padding: 0.5rem 1rem; }
+            .hamburger { display: flex; }
+            .hero { padding: 6rem 1rem 2rem; min-height: 90vh; }
+            .hero-content h1 { font-size: clamp(1.8rem, 7vw, 2.8rem); }
+            .hero-stats-3d .stat h3 { font-size: 1.5rem; }
+            .section { padding: 2rem 1rem; }
+            .section-header h2 { font-size: clamp(1.5rem, 4vw, 2.2rem); }
+            .category-grid { grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); }
+            .team-grid { grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); }
+            .testimonial-grid { grid-template-columns: 1fr; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .branch-grid { grid-template-columns: 1fr; }
+            .footer-top { flex-direction: column; align-items: flex-start; }
+            .modal-box { padding: 1.2rem; margin: 0.5rem; }
+            #cookie-banner { padding: 0.6rem 1.2rem; border-radius: 30px; bottom: 0.8rem; gap: 0.6rem; width: 95%; }
+            #cookie-banner p { font-size: 0.75rem; }
+            #cookie-banner .btn-cookie { padding: 0.3rem 1.2rem; font-size: 0.75rem; }
+            .lang-switcher { margin-left: 0; }
+            .dropdown-content { position: static; width: 100%; }
+            .dropdown-industry .dropbtn { width: 100%; text-align: center; }
+        }
+        @media (max-width:480px){
+            .hero-content h1 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+            .btn-primary-3d, .btn-outline-3d { padding: 0.6rem 1.4rem; font-size: 0.85rem; }
+            .hero-stats-3d { flex-wrap: wrap; gap: 1rem; }
+            .hero-stats-3d .stat h3 { font-size: 1.3rem; }
+            .category-grid { grid-template-columns: 1fr 1fr; }
+            .team-grid { grid-template-columns: 1fr 1fr; }
+            .branch-grid .glass-card { padding: 1.2rem; }
+            .glass-card { padding: 1.2rem 1rem; }
+            .contact-form input, .contact-form textarea, .contact-form select { padding: 0.6rem 0.8rem; font-size: 0.85rem; }
+            .contact-info .item { font-size: 0.8rem; }
+            .contact-info .item i { font-size: 1rem; width: 24px; }
+            .whatsapp-float { width: 48px; height: 48px; font-size: 1.8rem; bottom: 1rem; right: 1rem; }
+            .footer-links { gap: 0.8rem; }
+            .footer-links a { font-size: 0.65rem; }
+        }
+        @media (max-width:400px){
+            .category-grid { grid-template-columns: 1fr; }
+            .team-grid { grid-template-columns: 1fr; }
+            .logo-3d .brand-text { font-size: 0.8rem; }
+            .logo-3d .icon-3d { font-size: 1.2rem; }
+            .logo-3d .sub-tag { font-size: 0.35rem; }
+        }
 
-        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-track { background: var(--bg-deep); }
         ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: #d4a017; }
@@ -472,8 +526,7 @@
         #section-about .glass-card li,
         #section-about .glass-card h3,
         #section-about .glass-card h4,
-        #section-about .glass-card h5,
-        #section-about .glass-card .about-text {
+        #section-about .glass-card h5 {
             color: var(--text-muted) !important;
         }
         #section-about .glass-card strong {
@@ -491,6 +544,26 @@
         }
         #section-about .glass-card .about-text {
             color: var(--text-muted) !important;
+        }
+        /* About section mobile padding fix */
+        #section-about .glass-card {
+            padding: 1.5rem 1rem !important;
+        }
+        @media (min-width: 768px) {
+            #section-about .glass-card {
+                padding: 3rem !important;
+            }
+        }
+        #section-about .glass-card .about-list-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+            padding-left: 0.5rem;
+        }
+        @media (max-width: 480px) {
+            #section-about .glass-card .about-list-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -518,8 +591,8 @@
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
         <a href="#" class="logo-3d" onclick="navigateTo('home')">
-            <span class="icon-3d" style="font-size:2.2rem;">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' stroke='%23fbbf24' stroke-width='3' fill='none'/%3E%3Cpath d='M50 10 L50 90 M10 50 L90 50' stroke='%23fbbf24' stroke-width='2' opacity='0.5'/%3E%3Ccircle cx='50' cy='50' r='18' stroke='%23fbbf24' stroke-width='2' fill='none'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%23fbbf24'/%3E%3Cpath d='M50 28 L50 16 M50 84 L50 72 M28 50 L16 50 M84 50 L72 50' stroke='%23fbbf24' stroke-width='2'/%3E%3C/svg%3E" alt="Logo" style="width:40px;height:40px;">
+            <span class="icon-3d" style="font-size:1.8rem;">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' stroke='%23fbbf24' stroke-width='3' fill='none'/%3E%3Cpath d='M50 10 L50 90 M10 50 L90 50' stroke='%23fbbf24' stroke-width='2' opacity='0.5'/%3E%3Ccircle cx='50' cy='50' r='18' stroke='%23fbbf24' stroke-width='2' fill='none'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%23fbbf24'/%3E%3Cpath d='M50 28 L50 16 M50 84 L50 72 M28 50 L16 50 M84 50 L72 50' stroke='%23fbbf24' stroke-width='2'/%3E%3C/svg%3E" alt="Logo" style="width:32px;height:32px;">
             </span>
             <div class="brand-text">
                 RANA<span>SOLAR</span>
@@ -527,24 +600,24 @@
             </div>
         </a>
         <ul class="nav-links" id="navLinks">
-            <li><a onclick="navigateTo('home')" class="active">Home</a></li>
-            <li><a onclick="navigateTo('about')">About</a></li>
-            <li><a onclick="navigateTo('services')">Services</a></li>
-            <li><a onclick="navigateTo('products')">Products</a></li>
+            <li><a onclick="navigateTo('home')" class="active" data-key="home">Home</a></li>
+            <li><a onclick="navigateTo('about')" data-key="about">About</a></li>
+            <li><a onclick="navigateTo('services')" data-key="services">Services</a></li>
+            <li><a onclick="navigateTo('products')" data-key="products">Products</a></li>
             <!-- Industry Dropdown -->
             <li class="dropdown-industry">
-                <button class="dropbtn">Industry <i class="fas fa-chevron-down" style="font-size:0.6rem;margin-left:4px;"></i></button>
+                <button class="dropbtn" data-key="industry">Industry <i class="fas fa-chevron-down" style="font-size:0.5rem;margin-left:3px;"></i></button>
                 <div class="dropdown-content">
                     <a onclick="navigateTo('branches')">RANA SOLAR TRADERS KASUR</a>
                     <a onclick="navigateTo('branches')">RANA SOLAR INVERTER REPAIRING LAB</a>
                     <a onclick="navigateTo('branches')">RANA SOLAR TRADERS MUSTAFA ABAD LALYANI</a>
                 </div>
             </li>
-            <li><a onclick="navigateTo('team')">Team</a></li>
-            <li><a onclick="navigateTo('testimonials')">Testimonials</a></li>
-            <li><a onclick="navigateTo('blog')">Blog</a></li>
-            <li><a onclick="navigateTo('faq')">FAQ</a></li>
-            <li><a onclick="navigateTo('contact')" class="btn-cta"><i class="fas fa-bolt"></i> Contact</a></li>
+            <li><a onclick="navigateTo('team')" data-key="team">Team</a></li>
+            <li><a onclick="navigateTo('testimonials')" data-key="testimonials">Testimonials</a></li>
+            <li><a onclick="navigateTo('blog')" data-key="blog">Blog</a></li>
+            <li><a onclick="navigateTo('faq')" data-key="faq">FAQ</a></li>
+            <li><a onclick="navigateTo('contact')" class="btn-cta" data-key="contact"><i class="fas fa-bolt"></i> Contact</a></li>
             <li>
                 <div class="lang-switcher">
                     <button class="active" onclick="setLanguage('en')">EN</button>
@@ -561,18 +634,18 @@
     <!-- ===== HERO ===== -->
     <section class="hero" id="section-home">
         <div class="hero-content">
-            <div class="glow-badge"><i class="fas fa-rotate"></i> NRE Claim Center</div>
-            <h1>Solar <br />Repair &amp; Service</h1>
-            <p class="sub-title">RANA SOLAR TRADERS — Expert inverter repair, NRE claims, and premium solar products. 10+ years of trusted service. We are committed to providing sustainable energy solutions with unmatched expertise and customer care.</p>
+            <div class="glow-badge" data-key="heroBadge"><i class="fas fa-rotate"></i> NRE Claim Center</div>
+            <h1 data-key="heroTitle">Solar <br />Repair &amp; Service</h1>
+            <p class="sub-title" data-key="heroSub">RANA SOLAR TRADERS — Expert inverter repair, NRE claims, and premium solar products. 10+ years of trusted service. We are committed to providing sustainable energy solutions with unmatched expertise and customer care.</p>
             <div class="hero-buttons">
-                <a href="https://wa.me/923000041131" target="_blank" class="btn-primary-3d"><i class="fab fa-whatsapp"></i> Connect Now</a>
-                <a href="#section-products" class="btn-outline-3d"><i class="fas fa-chevron-circle-right"></i> View Products</a>
+                <a href="https://wa.me/923000041131" target="_blank" class="btn-primary-3d" data-key="heroBtn1"><i class="fab fa-whatsapp"></i> Connect Now</a>
+                <a href="#section-products" class="btn-outline-3d" data-key="heroBtn2"><i class="fas fa-chevron-circle-right"></i> View Products</a>
             </div>
             <div class="hero-stats-3d">
-                <div class="stat"><h3>10+</h3><p>Years Experience</p></div>
-                <div class="stat"><h3>500+</h3><p>Repairs</p></div>
-                <div class="stat"><h3>4.9★</h3><p>Rating</p></div>
-                <div class="stat"><h3>100%</h3><p>Satisfaction</p></div>
+                <div class="stat"><h3>10+</h3><p data-key="years">Years Experience</p></div>
+                <div class="stat"><h3>500+</h3><p data-key="repairs">Repairs</p></div>
+                <div class="stat"><h3>4.9★</h3><p data-key="rating">Rating</p></div>
+                <div class="stat"><h3>100%</h3><p data-key="satisfaction">Satisfaction</p></div>
             </div>
         </div>
     </section>
@@ -580,86 +653,86 @@
     <!-- ===== ABOUT ===== -->
     <section class="section" id="section-about">
         <div class="section-header reveal">
-            <div class="tag"><i class="fas fa-info-circle"></i> ABOUT US</div>
+            <div class="tag"><i class="fas fa-info-circle"></i> <span data-key="aboutTag">ABOUT US</span></div>
             <h2>Who We <span>Are</span></h2>
-            <p>RANA SOLAR TRADERS — Your trusted solar partner.</p>
+            <p data-key="aboutSub">RANA SOLAR TRADERS — Your trusted solar partner.</p>
         </div>
-        <div class="glass-card reveal" style="max-width:1100px;margin:0 auto;text-align:left;padding:3rem;">
+        <div class="glass-card reveal" style="max-width:1100px;margin:0 auto;text-align:left;">
 
-            <h3 style="color:var(--gold);font-family:'Orbitron',monospace;font-size:1.5rem;text-align:center;margin-bottom:1.5rem;">A Reliable Journey Toward a Bright Future — Rana Solar Trader</h3>
+            <h3 style="color:var(--gold);font-family:'Orbitron',monospace;font-size:clamp(1.1rem,3vw,1.5rem);text-align:center;margin-bottom:1.2rem;">A Reliable Journey Toward a Bright Future — Rana Solar Trader</h3>
 
-            <p style="color:var(--text-muted);font-size:1rem;line-height:1.8;">Rana Solar Trader has become a trusted name in the solar energy sector through reliability, quality products, honest dealings, experience, and excellent customer service.</p>
+            <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;">Rana Solar Trader has become a trusted name in the solar energy sector through reliability, quality products, honest dealings, experience, and excellent customer service.</p>
 
-            <p style="color:var(--text-muted);font-size:1rem;line-height:1.8;margin-top:1rem;">Our journey began on <strong style="color:#fff;">November 18, 2020</strong>, in Kasur, Pakistan, when we established our first branch under the name <strong style="color:var(--gold);">Rana Solar Trader Kasur</strong>. With the trust and continued support of our valued customers, we successfully completed numerous solar projects and built a strong reputation through quality work and professional service.</p>
+            <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;margin-top:0.8rem;">Our journey began on <strong style="color:#fff;">November 18, 2020</strong>, in Kasur, Pakistan, when we established our first branch under the name <strong style="color:var(--gold);">Rana Solar Trader Kasur</strong>. With the trust and continued support of our valued customers, we successfully completed numerous solar projects and built a strong reputation through quality work and professional service.</p>
 
-            <p style="color:var(--text-muted);font-size:1rem;line-height:1.8;margin-top:1rem;">Continuing our journey, on <strong style="color:#fff;">January 23, 2021</strong>, we established our specialized <strong style="color:var(--gold);">Rana Solar Repairing Lab Kasur</strong>, where professional repair and technical services for solar inverters and solar equipment are provided.</p>
+            <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;margin-top:0.8rem;">Continuing our journey, on <strong style="color:#fff;">January 23, 2021</strong>, we established our specialized <strong style="color:var(--gold);">Rana Solar Repairing Lab Kasur</strong>, where professional repair and technical services for solar inverters and solar equipment are provided.</p>
 
-            <p style="color:var(--text-muted);font-size:1rem;line-height:1.8;margin-top:1rem;">On <strong style="color:#fff;">January 18, 2026</strong>, after continuous growth and earning the trust of our customers, we proudly established our third branch under the name <strong style="color:var(--gold);">Rana Solar Trader Mustafa Abad Lalian</strong>.</p>
+            <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;margin-top:0.8rem;">On <strong style="color:#fff;">January 18, 2026</strong>, after continuous growth and earning the trust of our customers, we proudly established our third branch under the name <strong style="color:var(--gold);">Rana Solar Trader Mustafa Abad Lalian</strong>.</p>
 
-            <p style="color:var(--text-muted);font-size:1rem;line-height:1.8;margin-top:1rem;">And our journey has not stopped yet. Insha'Allah, our next goal is to establish another branch in Raiwind in 2027, so that we can provide quality and reliable solar solutions to even more customers.</p>
+            <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;margin-top:0.8rem;">And our journey has not stopped yet. Insha'Allah, our next goal is to establish another branch in Raiwind in 2027, so that we can provide quality and reliable solar solutions to even more customers.</p>
 
-            <hr style="border-color:var(--border-glass);margin:2rem 0;" />
+            <hr style="border-color:var(--border-glass);margin:1.5rem 0;" />
 
-            <h4 style="color:var(--gold);font-family:'Orbitron',monospace;font-size:1.2rem;text-align:center;margin-bottom:1.5rem;">Complete Solar Solutions Under One Roof</h4>
+            <h4 style="color:var(--gold);font-family:'Orbitron',monospace;font-size:clamp(1rem,2.5vw,1.2rem);text-align:center;margin-bottom:1rem;">Complete Solar Solutions Under One Roof</h4>
 
-            <p style="color:var(--text-muted);font-size:1rem;line-height:1.8;text-align:center;margin-bottom:1.2rem;">At Rana Solar Trader, we provide A to Z solar solutions, including:</p>
+            <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;text-align:center;margin-bottom:1rem;">At Rana Solar Trader, we provide A to Z solar solutions, including:</p>
 
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.8rem;color:var(--text-muted);font-size:0.95rem;padding-left:1rem;">
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.5rem;"></i> Solar Inverters</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.5rem;"></i> Lithium Batteries</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.5rem;"></i> Solar Panels</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.5rem;"></i> Complete Solar Systems</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.5rem;"></i> Solar Installation</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.5rem;"></i> Solar Accessories & Essential Equipment</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.5rem;"></i> Solar Inverter Repair</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.5rem;"></i> Solar Panel Repair</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.5rem;"></i> Technical Support</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.5rem;"></i> Maintenance & After-Sales Service</div>
+            <div class="about-list-grid" style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);">
+                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Inverters</div>
+                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Lithium Batteries</div>
+                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Panels</div>
+                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Complete Solar Systems</div>
+                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Installation</div>
+                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Accessories & Essential Equipment</div>
+                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Inverter Repair</div>
+                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Panel Repair</div>
+                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Technical Support</div>
+                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Maintenance & After-Sales Service</div>
             </div>
 
-            <hr style="border-color:var(--border-glass);margin:2rem 0;" />
+            <hr style="border-color:var(--border-glass);margin:1.5rem 0;" />
 
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;">
                 <div>
-                    <h5 style="color:var(--gold);font-weight:700;">Experienced Solar Installation Team</h5>
-                    <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7;">We have an experienced and skilled solar installation team that understands the technical requirements of solar systems. From system planning and installation to testing and final setup, our team focuses on professional workmanship, safety, and the best possible system performance.</p>
+                    <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);">Experienced Solar Installation Team</h5>
+                    <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;">We have an experienced and skilled solar installation team that understands the technical requirements of solar systems. From system planning and installation to testing and final setup, our team focuses on professional workmanship, safety, and the best possible system performance.</p>
                 </div>
                 <div>
-                    <h5 style="color:var(--gold);font-weight:700;">Expert Solar Inverter Repairing Team</h5>
-                    <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7;">Our own repairing lab has experienced solar inverter repair masters and skilled technicians with practical experience in fault diagnosis, troubleshooting, testing, and repairing solar inverters. Rather than focusing only on temporary solutions, we emphasize proper fault diagnosis and professional repair, helping our customers receive reliable and long-lasting technical service.</p>
+                    <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);">Expert Solar Inverter Repairing Team</h5>
+                    <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;">Our own repairing lab has experienced solar inverter repair masters and skilled technicians with practical experience in fault diagnosis, troubleshooting, testing, and repairing solar inverters. Rather than focusing only on temporary solutions, we emphasize proper fault diagnosis and professional repair, helping our customers receive reliable and long-lasting technical service.</p>
                 </div>
                 <div>
-                    <h5 style="color:var(--gold);font-weight:700;">Professional Sales & Dealing Team</h5>
-                    <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7;">We also have an experienced sales and dealing team that understands each customer's requirements, system capacity, budget, and usage before recommending the right solar solution. We believe that honest advice is the foundation of a long-term customer relationship.</p>
-                </div>
-            </div>
-
-            <hr style="border-color:var(--border-glass);margin:2rem 0;" />
-
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;">
-                <div>
-                    <h5 style="color:var(--gold);font-weight:700;">Reasonable & Fair Prices</h5>
-                    <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7;">One of the major reasons our customers trust us is our reasonable and fair pricing. We continuously monitor market rates and source products from reliable suppliers and other market dealers at reasonable and competitive prices, allowing us to provide quality products to our customers at fair market rates. We believe in transparent and honest dealings — the right product, the right price, and the right guidance. Our goal is not simply to sell products at the lowest possible price. Our goal is to provide our customers with the best overall value, combining quality products, reasonable prices, professional installation, expert repair, and reliable after-sales support.</p>
-                </div>
-                <div>
-                    <h5 style="color:var(--gold);font-weight:700;">VERTRON Service Center</h5>
-                    <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7;">We also provide a dedicated service center facility for VERTRON Solar Inverters, where customers can receive professional technical support, inverter repair, and after-sales service.</p>
-                </div>
-                <div>
-                    <h5 style="color:var(--gold);font-weight:700;">Why Do Our Customers Trust Us?</h5>
-                    <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7;">For us, business is not simply about selling products; it is about building lasting trust and relationships. We strive to provide every customer with: Honest Dealing • Reasonable Prices • Quality Products • Professional Installation • Expert Repair • Reliable Service. For us, the sale of a product is not the end of our responsibility; rather, it is the beginning of a long-term relationship with our customer.</p>
+                    <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);">Professional Sales & Dealing Team</h5>
+                    <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;">We also have an experienced sales and dealing team that understands each customer's requirements, system capacity, budget, and usage before recommending the right solar solution. We believe that honest advice is the foundation of a long-term customer relationship.</p>
                 </div>
             </div>
 
-            <hr style="border-color:var(--border-glass);margin:2rem 0;" />
+            <hr style="border-color:var(--border-glass);margin:1.5rem 0;" />
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;">
+                <div>
+                    <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);">Reasonable & Fair Prices</h5>
+                    <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;">One of the major reasons our customers trust us is our reasonable and fair pricing. We continuously monitor market rates and source products from reliable suppliers and other market dealers at reasonable and competitive prices, allowing us to provide quality products to our customers at fair market rates. We believe in transparent and honest dealings — the right product, the right price, and the right guidance. Our goal is not simply to sell products at the lowest possible price. Our goal is to provide our customers with the best overall value, combining quality products, reasonable prices, professional installation, expert repair, and reliable after-sales support.</p>
+                </div>
+                <div>
+                    <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);">VERTRON Service Center</h5>
+                    <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;">We also provide a dedicated service center facility for VERTRON Solar Inverters, where customers can receive professional technical support, inverter repair, and after-sales service.</p>
+                </div>
+                <div>
+                    <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);">Why Do Our Customers Trust Us?</h5>
+                    <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;">For us, business is not simply about selling products; it is about building lasting trust and relationships. We strive to provide every customer with: Honest Dealing • Reasonable Prices • Quality Products • Professional Installation • Expert Repair • Reliable Service. For us, the sale of a product is not the end of our responsibility; rather, it is the beginning of a long-term relationship with our customer.</p>
+                </div>
+            </div>
+
+            <hr style="border-color:var(--border-glass);margin:1.5rem 0;" />
 
             <div style="text-align:center;">
-                <h4 style="color:var(--gold);font-family:'Orbitron',monospace;font-size:1.3rem;">Our Mission</h4>
-                <p style="color:var(--text-muted);font-size:1rem;line-height:1.8;max-width:800px;margin:1rem auto;">The journey that began with our first branch in Kasur has now grown into a business offering multiple services and branches. Alhamdulillah, Rana Solar Trader is now working as a complete solar solution provider, offering sales, installation, repair, technical support, maintenance, and after-sales services under one roof. We are sincerely grateful to every customer who has supported us throughout our journey and placed their trust in us.</p>
-                <p style="color:#fff;font-size:1.1rem;font-weight:600;margin-top:1rem;">Your Trust Is Our Greatest Achievement, and Your Satisfaction Is Our Highest Priority.</p>
-                <p style="color:var(--gold);font-size:1.2rem;font-weight:700;margin-top:1.5rem;">Rana Solar Trader</p>
-                <p style="color:var(--text-muted);font-size:0.95rem;">Your Trusted Partner for Complete Solar Solutions<br />Quality Products • Reasonable Prices • Expert Service • Honest Dealing • Long-Term Trust</p>
-                <p style="color:var(--gold);font-weight:600;margin-top:1rem;">Insha'Allah, this journey will continue to move forward with the same trust and commitment.</p>
+                <h4 style="color:var(--gold);font-family:'Orbitron',monospace;font-size:clamp(1.1rem,2.5vw,1.3rem);">Our Mission</h4>
+                <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;max-width:800px;margin:0.8rem auto;">The journey that began with our first branch in Kasur has now grown into a business offering multiple services and branches. Alhamdulillah, Rana Solar Trader is now working as a complete solar solution provider, offering sales, installation, repair, technical support, maintenance, and after-sales services under one roof. We are sincerely grateful to every customer who has supported us throughout our journey and placed their trust in us.</p>
+                <p style="color:#fff;font-size:clamp(0.95rem,2vw,1.1rem);font-weight:600;margin-top:0.8rem;">Your Trust Is Our Greatest Achievement, and Your Satisfaction Is Our Highest Priority.</p>
+                <p style="color:var(--gold);font-size:clamp(1rem,2.5vw,1.2rem);font-weight:700;margin-top:1.2rem;">Rana Solar Trader</p>
+                <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);">Your Trusted Partner for Complete Solar Solutions<br />Quality Products • Reasonable Prices • Expert Service • Honest Dealing • Long-Term Trust</p>
+                <p style="color:var(--gold);font-weight:600;margin-top:0.8rem;font-size:clamp(0.85rem,2vw,1rem);">Insha'Allah, this journey will continue to move forward with the same trust and commitment.</p>
             </div>
 
         </div>
@@ -668,12 +741,12 @@
     <!-- ===== BRANCHES (Industry Section) ===== -->
     <section class="section" id="section-branches">
         <div class="section-header reveal">
-            <div class="tag"><i class="fas fa-store"></i> OUR BRANCHES</div>
+            <div class="tag"><i class="fas fa-store"></i> <span data-key="branchesTag">OUR BRANCHES</span></div>
             <h2>Visit Our <span>Shops</span></h2>
-            <p>Three convenient locations to serve you better.</p>
+            <p data-key="branchesSub">Three convenient locations to serve you better.</p>
         </div>
         <div class="branch-grid">
-            <!-- Branch 1: RANA SOLAR TRADERS KASUR -->
+            <!-- Branch 1 -->
             <div class="glass-card reveal">
                 <div class="branch-icon"><i class="fas fa-store-alt"></i></div>
                 <h3>RANA SOLAR TRADERS KASUR</h3>
@@ -691,10 +764,10 @@
                     <a href="tel:03000046544"><i class="fas fa-phone"></i> 0300-0046544</a>
                     <a href="https://wa.me/923000046544" target="_blank" class="wa-link"><i class="fab fa-whatsapp"></i> RANA TASAWAR</a>
                 </div>
-                <div style="margin-top:0.8rem;color:var(--text-muted);font-size:0.85rem;"><i class="far fa-clock"></i> Mon-Sun 9AM-7PM (Fri Off)</div>
+                <div style="margin-top:0.6rem;color:var(--text-muted);font-size:0.8rem;"><i class="far fa-clock"></i> Mon-Sun 9AM-7PM (Fri Off)</div>
                 <div class="branch-map"><a href="https://maps.app.goo.gl/dsBdH9LWPDAk2yHn8?g_st=awb" target="_blank"><i class="fas fa-map-marked-alt"></i> Get Location</a></div>
             </div>
-            <!-- Branch 2: RANA SOLAR INVERTER REPAIRING LAB -->
+            <!-- Branch 2 -->
             <div class="glass-card reveal">
                 <div class="branch-icon"><i class="fas fa-microscope"></i></div>
                 <h3>RANA SOLAR INVERTER REPAIRING LAB</h3>
@@ -712,10 +785,10 @@
                     <a href="tel:03000046544"><i class="fas fa-phone"></i> 0300-0046544</a>
                     <a href="https://wa.me/923000046544" target="_blank" class="wa-link"><i class="fab fa-whatsapp"></i> RANA TASAWAR</a>
                 </div>
-                <div style="margin-top:0.8rem;color:var(--text-muted);font-size:0.85rem;"><i class="far fa-clock"></i> Mon-Sun 9AM-7PM (Fri Off)</div>
+                <div style="margin-top:0.6rem;color:var(--text-muted);font-size:0.8rem;"><i class="far fa-clock"></i> Mon-Sun 9AM-7PM (Fri Off)</div>
                 <div class="branch-map"><a href="https://maps.app.goo.gl/SyVqXZg3g1GFqoaDA?g_st=awb" target="_blank"><i class="fas fa-map-marked-alt"></i> Get Location</a></div>
             </div>
-            <!-- Branch 3: RANA SOLAR TRADERS MUSTAFA ABAD LALYANI -->
+            <!-- Branch 3 -->
             <div class="glass-card reveal">
                 <div class="branch-icon"><i class="fas fa-store-alt"></i></div>
                 <h3>RANA SOLAR TRADERS MUSTAFA ABAD LALYANI</h3>
@@ -733,7 +806,7 @@
                     <a href="tel:03000046544"><i class="fas fa-phone"></i> 0300-0046544</a>
                     <a href="https://wa.me/923000046544" target="_blank" class="wa-link"><i class="fab fa-whatsapp"></i> RANA TASAWAR</a>
                 </div>
-                <div style="margin-top:0.8rem;color:var(--text-muted);font-size:0.85rem;"><i class="far fa-clock"></i> Mon-Sun 9AM-7PM (Fri Off)</div>
+                <div style="margin-top:0.6rem;color:var(--text-muted);font-size:0.8rem;"><i class="far fa-clock"></i> Mon-Sun 9AM-7PM (Fri Off)</div>
                 <div class="branch-map"><a href="https://maps.app.goo.gl/puspNV8oWLxbCThs9?g_st=awb" target="_blank"><i class="fas fa-map-marked-alt"></i> Get Location</a></div>
             </div>
         </div>
@@ -742,9 +815,9 @@
     <!-- ===== SERVICES ===== -->
     <section class="section" id="section-services">
         <div class="section-header reveal">
-            <div class="tag"><i class="fas fa-cube"></i> SERVICES</div>
+            <div class="tag"><i class="fas fa-cube"></i> <span data-key="servicesTag">SERVICES</span></div>
             <h2>Our <span>Services</span></h2>
-            <p>Professional solar solutions — from repairs to NRE claims.</p>
+            <p data-key="servicesSub">Professional solar solutions — from repairs to NRE claims.</p>
         </div>
         <div class="category-grid">
             <div class="glass-card reveal"><div class="icon"><i class="fas fa-microchip"></i></div><h3>Inverter Repair</h3><p>All boards &amp; MPPTs. Expert diagnosis and repair.</p><span class="badge">Expert</span></div>
@@ -759,9 +832,9 @@
     <!-- ===== PRODUCTS ===== -->
     <section class="section" id="section-products">
         <div class="section-header reveal">
-            <div class="tag"><i class="fas fa-rotate-3d"></i> INVENTORY</div>
+            <div class="tag"><i class="fas fa-rotate-3d"></i> <span data-key="productsTag">INVENTORY</span></div>
             <h2>Our <span>Products</span></h2>
-            <p>Genuine solar parts and inverters — all available in stock.</p>
+            <p data-key="productsSub">Genuine solar parts and inverters — all available in stock.</p>
         </div>
         <div class="product-grid">
             <div class="product-card reveal">
@@ -822,9 +895,9 @@
     <!-- ===== TEAM ===== -->
     <section class="section" id="section-team">
         <div class="section-header reveal">
-            <div class="tag"><i class="fas fa-users"></i> OUR TEAM</div>
+            <div class="tag"><i class="fas fa-users"></i> <span data-key="teamTag">OUR TEAM</span></div>
             <h2>Meet Our <span>Team</span></h2>
-            <p>The experts behind RANA SOLAR TRADERS.</p>
+            <p data-key="teamSub">The experts behind RANA SOLAR TRADERS.</p>
         </div>
         <div class="team-grid">
             <div class="glass-card reveal">
@@ -883,9 +956,9 @@
     <!-- ===== TESTIMONIALS ===== -->
     <section class="section" id="section-testimonials">
         <div class="section-header reveal">
-            <div class="tag"><i class="fas fa-star"></i> FEEDBACK</div>
+            <div class="tag"><i class="fas fa-star"></i> <span data-key="testTag">FEEDBACK</span></div>
             <h2>What Our <span>Clients Say</span></h2>
-            <p>Real reviews from real customers.</p>
+            <p data-key="testSub">Real reviews from real customers.</p>
         </div>
         <div class="testimonial-grid">
             <div class="glass-card reveal">
@@ -912,9 +985,9 @@
     <!-- ===== BLOG ===== -->
     <section class="section" id="section-blog">
         <div class="section-header reveal">
-            <div class="tag"><i class="fas fa-newspaper"></i> UPDATES</div>
+            <div class="tag"><i class="fas fa-newspaper"></i> <span data-key="blogTag">UPDATES</span></div>
             <h2>Latest <span>Blog</span></h2>
-            <p>Stay updated with solar news and tips.</p>
+            <p data-key="blogSub">Stay updated with solar news and tips.</p>
         </div>
         <div class="blog-grid">
             <div class="glass-card reveal">
@@ -947,9 +1020,9 @@
     <!-- ===== FAQ ===== -->
     <section class="section" id="section-faq">
         <div class="section-header reveal">
-            <div class="tag"><i class="fas fa-question-circle"></i> HELP CENTER</div>
+            <div class="tag"><i class="fas fa-question-circle"></i> <span data-key="faqTag">HELP CENTER</span></div>
             <h2>Frequently Asked <span>Questions</span></h2>
-            <p>Quick answers to common questions.</p>
+            <p data-key="faqSub">Quick answers to common questions.</p>
         </div>
         <div class="faq-grid">
             <div class="faq-item reveal">
@@ -974,9 +1047,9 @@
     <!-- ===== CONTACT ===== -->
     <section class="section" id="section-contact">
         <div class="section-header reveal">
-            <div class="tag"><i class="fas fa-paper-plane"></i> CONTACT</div>
+            <div class="tag"><i class="fas fa-paper-plane"></i> <span data-key="contactTag">CONTACT</span></div>
             <h2>Get in <span>Touch</span></h2>
-            <p>Send a message — we'll respond in light‑speed.</p>
+            <p data-key="contactSub">Send a message — we'll respond in light‑speed.</p>
         </div>
         <div class="contact-wrapper">
             <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="return handleContact(event)">
@@ -1011,8 +1084,8 @@
                     <p style="color:var(--text-muted);"><i class="fas fa-map"></i> Find us on Google Maps</p>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108638.81453711894!2d74.233578!3d31.115843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391964aa4c7d6b0b%3A0x8b8b6b6b6b6b6b6b!2sKasur%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div style="margin-top:1.5rem;">
-                    <label style="font-weight:600;color:#fff;display:block;margin-bottom:0.5rem;">📡 Subscribe to Updates</label>
+                <div style="margin-top:1.2rem;">
+                    <label style="font-weight:600;color:#fff;display:block;margin-bottom:0.4rem;font-size:0.95rem;">📡 Subscribe to Updates</label>
                     <div class="newsletter-box">
                         <input type="email" placeholder="Enter email" id="newsletterEmail" />
                         <button onclick="subscribeNewsletter()"><i class="fas fa-paper-plane"></i> Subscribe</button>
@@ -1025,13 +1098,13 @@
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="footer-top">
-            <div class="logo-3d" style="gap:0.5rem;">
-                <span class="icon-3d" style="font-size:1.8rem;">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' stroke='%23fbbf24' stroke-width='3' fill='none'/%3E%3Cpath d='M50 10 L50 90 M10 50 L90 50' stroke='%23fbbf24' stroke-width='2' opacity='0.5'/%3E%3Ccircle cx='50' cy='50' r='18' stroke='%23fbbf24' stroke-width='2' fill='none'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%23fbbf24'/%3E%3Cpath d='M50 28 L50 16 M50 84 L50 72 M28 50 L16 50 M84 50 L72 50' stroke='%23fbbf24' stroke-width='2'/%3E%3C/svg%3E" alt="Logo" style="width:32px;height:32px;">
+            <div class="logo-3d" style="gap:0.4rem;">
+                <span class="icon-3d" style="font-size:1.4rem;">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' stroke='%23fbbf24' stroke-width='3' fill='none'/%3E%3Cpath d='M50 10 L50 90 M10 50 L90 50' stroke='%23fbbf24' stroke-width='2' opacity='0.5'/%3E%3Ccircle cx='50' cy='50' r='18' stroke='%23fbbf24' stroke-width='2' fill='none'/%3E%3Ccircle cx='50' cy='50' r='6' fill='%23fbbf24'/%3E%3Cpath d='M50 28 L50 16 M50 84 L50 72 M28 50 L16 50 M84 50 L72 50' stroke='%23fbbf24' stroke-width='2'/%3E%3C/svg%3E" alt="Logo" style="width:28px;height:28px;">
                 </span>
-                <div class="brand-text" style="font-size:1rem;">
+                <div class="brand-text" style="font-size:0.85rem;">
                     RANA<span>SOLAR</span>
-                    <span class="sub-tag" style="font-size:0.5rem;">TRADERS</span>
+                    <span class="sub-tag" style="font-size:0.4rem;">TRADERS</span>
                 </div>
             </div>
             <div class="footer-socials">
@@ -1045,15 +1118,15 @@
             </div>
         </div>
         <div class="footer-links">
-            <a onclick="openModal('privacy')">Privacy Policy</a>
-            <a onclick="openModal('terms')">Terms of Service</a>
-            <a onclick="openModal('cookie')">Cookie Policy</a>
-            <a onclick="openModal('disclaimer')">Disclaimer</a>
+            <a onclick="openModal('privacy')" data-key="privacy">Privacy Policy</a>
+            <a onclick="openModal('terms')" data-key="terms">Terms of Service</a>
+            <a onclick="openModal('cookie')" data-key="cookie">Cookie Policy</a>
+            <a onclick="openModal('disclaimer')" data-key="disclaimer">Disclaimer</a>
         </div>
         <div class="footer-bottom">
-            <div>&copy; <span id="year"></span> RANA SOLAR TRADERS — All rights reserved.</div>
-            <div>Powered by <a href="https://nexussolution603.github.io/in/" target="_blank">NEXUS SOLUTION</a></div>
-            <div class="protected"><i class="fas fa-lock"></i> Protected · 3D Experience</div>
+            <div>&copy; <span id="year"></span> RANA SOLAR TRADERS — <span data-key="rights">All rights reserved.</span></div>
+            <div><span data-key="powered">Powered by</span> <a href="https://nexussolution603.github.io/in/" target="_blank">NEXUS SOLUTION</a></div>
+            <div class="protected"><i class="fas fa-lock"></i> <span data-key="protected">Protected · 3D Experience</span></div>
         </div>
     </footer>
 
@@ -1135,8 +1208,8 @@
         function navigateTo(section) {
             document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
             document.querySelectorAll('.nav-links a').forEach(l => {
-                if (l.textContent.trim().toLowerCase() === section || (section === 'home' && l.textContent.trim()
-                        .toLowerCase() === 'home')) l.classList.add('active');
+                if (l.textContent.trim().toLowerCase().includes(section) || (section === 'home' && l.textContent
+                        .trim().toLowerCase().includes('home'))) l.classList.add('active');
             });
             document.getElementById('navLinks').classList.remove('open');
             const transition = document.getElementById('portal-transition');
@@ -1173,12 +1246,10 @@
         //  CONTACT FORM - Web3Forms
         // ============================================================
         function handleContact(e) {
-            // The form will submit natively to Web3Forms
-            // We just show a success message after submission
             setTimeout(() => {
                 alert('✅ Message sent successfully! We will respond shortly.');
             }, 100);
-            return true; // Allow form to submit
+            return true;
         }
 
         // ============================================================
@@ -1186,11 +1257,11 @@
         // ============================================================
         function subscribeNewsletter() {
             const input = document.getElementById('newsletterEmail');
-            if (input.value && input.value.includes('@')) { 
+            if (input.value && input.value.includes('@')) {
                 alert('✅ Subscribed successfully!');
-                input.value = ''; 
-            } else { 
-                alert('Please enter a valid email.'); 
+                input.value = '';
+            } else {
+                alert('Please enter a valid email.');
             }
         }
 
@@ -1205,11 +1276,11 @@
         const revealEls = document.querySelectorAll('.reveal');
         const obs = new IntersectionObserver((entries) => {
             entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.12 });
         revealEls.forEach(el => obs.observe(el));
 
         // ============================================================
-        //  LANGUAGE SWITCHER
+        //  LANGUAGE SWITCHER - FULL TRANSLATION
         // ============================================================
         const translations = {
             en: {
@@ -1221,15 +1292,17 @@
                 heroSub: "RANA SOLAR TRADERS — Expert inverter repair, NRE claims, and premium solar products. 10+ years of trusted service.",
                 heroBtn1: "Connect Now", heroBtn2: "View Products",
                 years: "Years Experience", repairs: "Repairs", rating: "Rating", satisfaction: "Satisfaction",
-                aboutTitle: "Who We Are", aboutSub: "RANA SOLAR TRADERS — Your trusted solar partner.",
-                branchesTitle: "Visit Our Shops", branchesSub: "Three convenient locations to serve you better.",
-                servicesTitle: "Our Services", servicesSub: "Professional solar solutions — from repairs to NRE claims.",
-                teamTitle: "Meet Our Team", teamSub: "The experts behind RANA SOLAR TRADERS.",
-                testTitle: "What Our Clients Say", testSub: "Real reviews from real customers.",
-                blogTitle: "Latest Blog", blogSub: "Stay updated with solar news and tips.",
-                faqTitle: "Frequently Asked Questions", faqSub: "Quick answers to common questions.",
-                contactTitle: "Get in Touch", contactSub: "Send a message — we'll respond in light‑speed.",
-                rights: "All rights reserved.", powered: "Powered by", protected: "Protected · 3D Experience"
+                aboutTag: "ABOUT US", aboutSub: "RANA SOLAR TRADERS — Your trusted solar partner.",
+                branchesTag: "OUR BRANCHES", branchesSub: "Three convenient locations to serve you better.",
+                servicesTag: "SERVICES", servicesSub: "Professional solar solutions — from repairs to NRE claims.",
+                productsTag: "INVENTORY", productsSub: "Genuine solar parts and inverters — all available in stock.",
+                teamTag: "OUR TEAM", teamSub: "The experts behind RANA SOLAR TRADERS.",
+                testTag: "FEEDBACK", testSub: "Real reviews from real customers.",
+                blogTag: "UPDATES", blogSub: "Stay updated with solar news and tips.",
+                faqTag: "HELP CENTER", faqSub: "Quick answers to common questions.",
+                contactTag: "CONTACT", contactSub: "Send a message — we'll respond in light‑speed.",
+                rights: "All rights reserved.", powered: "Powered by", protected: "Protected · 3D Experience",
+                privacy: "Privacy Policy", terms: "Terms of Service", cookie: "Cookie Policy", disclaimer: "Disclaimer"
             },
             ur: {
                 home: "ہوم", about: "ہمارے بارے میں", services: "خدمات", products: "مصنوعات",
@@ -1240,15 +1313,17 @@
                 heroSub: "رانا سولر ٹریڈرز — ماہر انورٹر مرمت، این آر ای کلیمز، اور پریمیم سولر مصنوعات۔ 10+ سال کی قابل اعتماد سروس۔",
                 heroBtn1: "ابھی رابطہ کریں", heroBtn2: "مصنوعات دیکھیں",
                 years: "سال کا تجربہ", repairs: "مرمت", rating: "درجہ بندی", satisfaction: "اطمینان",
-                aboutTitle: "ہم کون ہیں", aboutSub: "رانا سولر ٹریڈرز — آپ کا قابل اعتماد سولر پارٹنر۔",
-                branchesTitle: "ہماری شاپس دیکھیں", branchesSub: "آپ کی بہتر خدمت کے لیے تین آسان مقامات۔",
-                servicesTitle: "ہماری خدمات", servicesSub: "پیشہ ورانہ سولر حل — مرمت سے لے کر این آر ای کلیمز تک۔",
-                teamTitle: "ہماری ٹیم سے ملیں", teamSub: "رانا سولر ٹریڈرز کے پیچھے ماہرین۔",
-                testTitle: "ہمارے کلائنٹ کیا کہتے ہیں", testSub: "حقیقی صارفین کے حقیقی جائزے۔",
-                blogTitle: "تازہ ترین بلاگ", blogSub: "سولر نیوز اور ٹپس کے ساتھ اپ ڈیٹ رہیں۔",
-                faqTitle: "اکثر پوچھے جانے والے سوالات", faqSub: "عام سوالات کے فوری جوابات۔",
-                contactTitle: "رابطہ کریں", contactSub: "پیغام بھیجیں — ہم جلد جواب دیں گے۔",
-                rights: "جملہ حقوق محفوظ ہیں۔", powered: "تقویت یافتہ", protected: "محفوظ · 3D تجربہ"
+                aboutTag: "ہمارے بارے میں", aboutSub: "رانا سولر ٹریڈرز — آپ کا قابل اعتماد سولر پارٹنر۔",
+                branchesTag: "ہماری شاخیں", branchesSub: "آپ کی بہتر خدمت کے لیے تین آسان مقامات۔",
+                servicesTag: "خدمات", servicesSub: "پیشہ ورانہ سولر حل — مرمت سے لے کر این آر ای کلیمز تک۔",
+                productsTag: "انوینٹری", productsSub: "حقیقی سولر پرزے اور انورٹرز — تمام اسٹاک میں دستیاب ہیں۔",
+                teamTag: "ہماری ٹیم", teamSub: "رانا سولر ٹریڈرز کے پیچھے ماہرین۔",
+                testTag: "آراء", testSub: "حقیقی صارفین کے حقیقی جائزے۔",
+                blogTag: "تازہ ترین", blogSub: "سولر نیوز اور ٹپس کے ساتھ اپ ڈیٹ رہیں۔",
+                faqTag: "مدد", faqSub: "عام سوالات کے فوری جوابات۔",
+                contactTag: "رابطہ", contactSub: "پیغام بھیجیں — ہم جلد جواب دیں گے۔",
+                rights: "جملہ حقوق محفوظ ہیں۔", powered: "تقویت یافتہ", protected: "محفوظ · 3D تجربہ",
+                privacy: "رازداری کی پالیسی", terms: "خدمات کی شرائط", cookie: "کوکی پالیسی", disclaimer: "ڈس کلیمر"
             },
             zh: {
                 home: "主页", about: "关于我们", services: "服务", products: "产品",
@@ -1259,15 +1334,17 @@
                 heroSub: "RANA SOLAR TRADERS — 专业的逆变器维修、NRE 索赔和优质太阳能产品。10 多年值得信赖的服务。",
                 heroBtn1: "立即联系", heroBtn2: "查看产品",
                 years: "年经验", repairs: "维修", rating: "评分", satisfaction: "满意度",
-                aboutTitle: "关于我们", aboutSub: "RANA SOLAR TRADERS — 您值得信赖的太阳能合作伙伴。",
-                branchesTitle: "访问我们的店铺", branchesSub: "三个便利的位置为您提供更好的服务。",
-                servicesTitle: "我们的服务", servicesSub: "专业的太阳能解决方案 — 从维修到 NRE 索赔。",
-                teamTitle: "认识我们的团队", teamSub: "RANA SOLAR TRADERS 背后的专家。",
-                testTitle: "客户评价", testSub: "真实客户的真实评价。",
-                blogTitle: "最新博客", blogSub: "随时了解太阳能新闻和技巧。",
-                faqTitle: "常见问题", faqSub: "常见问题的快速解答。",
-                contactTitle: "联系我们", contactSub: "发送消息 — 我们会快速回复。",
-                rights: "保留所有权利。", powered: "技术支持", protected: "受保护 · 3D 体验"
+                aboutTag: "关于我们", aboutSub: "RANA SOLAR TRADERS — 您值得信赖的太阳能合作伙伴。",
+                branchesTag: "我们的分店", branchesSub: "三个便利的位置为您提供更好的服务。",
+                servicesTag: "服务", servicesSub: "专业的太阳能解决方案 — 从维修到 NRE 索赔。",
+                productsTag: "库存", productsSub: "正品太阳能配件和逆变器 — 均有现货。",
+                teamTag: "我们的团队", teamSub: "RANA SOLAR TRADERS 背后的专家。",
+                testTag: "客户反馈", testSub: "真实客户的真实评价。",
+                blogTag: "最新更新", blogSub: "随时了解太阳能新闻和技巧。",
+                faqTag: "帮助中心", faqSub: "常见问题的快速解答。",
+                contactTag: "联系我们", contactSub: "发送消息 — 我们会快速回复。",
+                rights: "保留所有权利。", powered: "技术支持", protected: "受保护 · 3D 体验",
+                privacy: "隐私政策", terms: "服务条款", cookie: "Cookie 政策", disclaimer: "免责声明"
             }
         };
 
@@ -1277,23 +1354,19 @@
             currentLang = lang;
             document.querySelectorAll('.lang-switcher button').forEach(btn => btn.classList.remove('active'));
             document.querySelector(`.lang-switcher button[onclick="setLanguage('${lang}')"]`).classList.add('active');
-            
+
             const t = translations[lang];
             if (!t) return;
 
-            // Navbar links
-            const navLinks = document.querySelectorAll('.nav-links a');
-            const navTexts = ['home', 'about', 'services', 'products', 'team', 'testimonials', 'blog', 'faq', 'contact'];
-            navLinks.forEach((link, index) => {
-                if (index < navTexts.length) {
-                    const key = navTexts[index];
-                    if (t[key]) {
-                        const icon = link.querySelector('i');
-                        if (icon) {
-                            link.innerHTML = icon.outerHTML + ' ' + t[key];
-                        } else {
-                            link.textContent = t[key];
-                        }
+            // Navbar links - using data-key attributes
+            document.querySelectorAll('.nav-links a[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (t[key]) {
+                    const icon = el.querySelector('i');
+                    if (icon) {
+                        el.innerHTML = icon.outerHTML + ' ' + t[key];
+                    } else {
+                        el.textContent = t[key];
                     }
                 }
             });
@@ -1309,72 +1382,56 @@
             }
 
             // Hero
-            document.querySelector('.hero .glow-badge').textContent = t.heroBadge || 'NRE Claim Center';
-            document.querySelector('.hero h1').textContent = t.heroTitle || 'Solar Repair & Service';
-            document.querySelector('.hero .sub-title').textContent = t.heroSub || '';
+            document.querySelector('.hero .glow-badge[data-key]').textContent = t.heroBadge || 'NRE Claim Center';
+            document.querySelector('.hero h1[data-key]').textContent = t.heroTitle || 'Solar Repair & Service';
+            document.querySelector('.hero .sub-title[data-key]').textContent = t.heroSub || '';
             const heroBtns = document.querySelectorAll('.hero-buttons a');
             if (heroBtns[0]) heroBtns[0].innerHTML = '<i class="fab fa-whatsapp"></i> ' + (t.heroBtn1 || 'Connect Now');
             if (heroBtns[1]) heroBtns[1].innerHTML = '<i class="fas fa-chevron-circle-right"></i> ' + (t.heroBtn2 || 'View Products');
-            
-            // Stats
-            const stats = document.querySelectorAll('.hero-stats-3d .stat p');
-            if (stats[0]) stats[0].textContent = t.years || 'Years Experience';
-            if (stats[1]) stats[1].textContent = t.repairs || 'Repairs';
-            if (stats[2]) stats[2].textContent = t.rating || 'Rating';
-            if (stats[3]) stats[3].textContent = t.satisfaction || 'Satisfaction';
 
-            // Section headers
+            // Stats
+            document.querySelectorAll('.hero-stats-3d .stat p').forEach((el, i) => {
+                const keys = ['years', 'repairs', 'rating', 'satisfaction'];
+                if (t[keys[i]]) el.textContent = t[keys[i]];
+            });
+
+            // Section headers and tags
             const sectionConfigs = [
-                { id: 'section-about', title: t.aboutTitle, sub: t.aboutSub },
-                { id: 'section-branches', title: t.branchesTitle, sub: t.branchesSub },
-                { id: 'section-services', title: t.servicesTitle, sub: t.servicesSub },
-                { id: 'section-team', title: t.teamTitle, sub: t.teamSub },
-                { id: 'section-testimonials', title: t.testTitle, sub: t.testSub },
-                { id: 'section-blog', title: t.blogTitle, sub: t.blogSub },
-                { id: 'section-faq', title: t.faqTitle, sub: t.faqSub },
-                { id: 'section-contact', title: t.contactTitle, sub: t.contactSub }
+                { id: 'section-about', tag: 'aboutTag', sub: 'aboutSub' },
+                { id: 'section-branches', tag: 'branchesTag', sub: 'branchesSub' },
+                { id: 'section-services', tag: 'servicesTag', sub: 'servicesSub' },
+                { id: 'section-products', tag: 'productsTag', sub: 'productsSub' },
+                { id: 'section-team', tag: 'teamTag', sub: 'teamSub' },
+                { id: 'section-testimonials', tag: 'testTag', sub: 'testSub' },
+                { id: 'section-blog', tag: 'blogTag', sub: 'blogSub' },
+                { id: 'section-faq', tag: 'faqTag', sub: 'faqSub' },
+                { id: 'section-contact', tag: 'contactTag', sub: 'contactSub' }
             ];
             sectionConfigs.forEach(cfg => {
                 const sec = document.getElementById(cfg.id);
                 if (sec) {
-                    const header = sec.querySelector('.section-header');
-                    if (header) {
-                        const h2 = header.querySelector('h2');
-                        if (h2 && cfg.title) {
-                            const span = h2.querySelector('span');
-                            if (span) {
-                                h2.innerHTML = cfg.title.replace(/\s(\w+)$/, ' <span>$1</span>');
-                            } else {
-                                h2.textContent = cfg.title;
-                            }
-                        }
-                        const p = header.querySelector('p');
-                        if (p && cfg.sub) p.textContent = cfg.sub;
-                    }
+                    const tagEl = sec.querySelector('.section-header .tag span[data-key]');
+                    if (tagEl && t[cfg.tag]) tagEl.textContent = t[cfg.tag];
+                    const subEl = sec.querySelector('.section-header p[data-key]');
+                    if (subEl && t[cfg.sub]) subEl.textContent = t[cfg.sub];
                 }
             });
 
             // Footer
-            const footerBottom = document.querySelector('.footer-bottom');
-            if (footerBottom) {
-                const rightsDiv = footerBottom.querySelector('div:first-child');
-                if (rightsDiv) {
-                    const year = new Date().getFullYear();
-                    rightsDiv.innerHTML = `&copy; ${year} RANA SOLAR TRADERS — ${t.rights || 'All rights reserved.'}`;
-                }
-                const poweredDiv = footerBottom.querySelector('div:nth-child(2)');
-                if (poweredDiv) {
-                    poweredDiv.innerHTML = `${t.powered || 'Powered by'} <a href="https://nexussolution603.github.io/in/" target="_blank">NEXUS SOLUTION</a>`;
-                }
-                const protectedDiv = footerBottom.querySelector('.protected');
-                if (protectedDiv) {
-                    protectedDiv.innerHTML = `<i class="fas fa-lock"></i> ${t.protected || 'Protected · 3D Experience'}`;
-                }
-            }
+            document.querySelectorAll('.footer-links a[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (t[key]) el.textContent = t[key];
+            });
+            const rightsEl = document.querySelector('.footer-bottom span[data-key="rights"]');
+            if (rightsEl && t.rights) rightsEl.textContent = t.rights;
+            const poweredEl = document.querySelector('.footer-bottom span[data-key="powered"]');
+            if (poweredEl && t.powered) poweredEl.textContent = t.powered;
+            const protectedEl = document.querySelector('.footer-bottom .protected span[data-key="protected"]');
+            if (protectedEl && t.protected) protectedEl.textContent = t.protected;
         }
 
         // ============================================================
-        //  THREE.JS — 3D SOLAR SYSTEM + PORTAL
+        //  THREE.JS — 3D SOLAR SYSTEM + PORTAL (Mobile Optimized)
         // ============================================================
         (function initThree() {
             const canvas = document.getElementById('three-canvas');
@@ -1471,7 +1528,7 @@
             panelGroup.position.set(0, -0.5, 0.5);
             scene.add(panelGroup);
 
-            const pCount = 1200;
+            const pCount = 800;
             const pGeo = new THREE.BufferGeometry();
             const pPos = new Float32Array(pCount * 3);
             const pSizes = new Float32Array(pCount);
@@ -1497,13 +1554,23 @@
             const particles = new THREE.Points(pGeo, pMat);
             scene.add(particles);
 
-            let mouseX = 0, mouseY = 0;
+            let mouseX = 0,
+                mouseY = 0;
             document.addEventListener('mousemove', (e) => {
                 mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
                 mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
             });
+            // Touch support for mobile
+            document.addEventListener('touchmove', (e) => {
+                const touch = e.touches[0];
+                if (touch) {
+                    mouseX = (touch.clientX / window.innerWidth - 0.5) * 2;
+                    mouseY = (touch.clientY / window.innerHeight - 0.5) * 2;
+                }
+            }, { passive: true });
 
             let time = 0;
+
             function animate() {
                 requestAnimationFrame(animate);
                 time += 0.006;
@@ -1514,7 +1581,8 @@
 
                 const pulse = 1 + Math.sin(time * 1.8) * 0.02;
                 ring.scale.set(pulse, pulse, pulse);
-                ring2.scale.set(1 + Math.sin(time * 1.8 + 0.5) * 0.015, 1 + Math.sin(time * 1.8 + 0.5) * 0.015, 1 + Math.sin(time * 1.8 + 0.5) * 0.015);
+                ring2.scale.set(1 + Math.sin(time * 1.8 + 0.5) * 0.015, 1 + Math.sin(time * 1.8 + 0.5) * 0.015, 1 + Math.sin(
+                    time * 1.8 + 0.5) * 0.015);
 
                 panelGroup.position.y = -0.5 + Math.sin(time * 0.8) * 0.15;
                 panelGroup.rotation.x = Math.sin(time * 0.5) * 0.05;
