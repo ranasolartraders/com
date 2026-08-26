@@ -545,7 +545,6 @@
         #section-about .glass-card .about-text {
             color: var(--text-muted) !important;
         }
-        /* About section mobile padding fix */
         #section-about .glass-card {
             padding: 1.5rem 1rem !important;
         }
@@ -564,6 +563,12 @@
             #section-about .glass-card .about-list-grid {
                 grid-template-columns: 1fr;
             }
+        }
+
+        /* ===== FAQ TRANSLATION SUPPORT ===== */
+        .faq-question .faq-q-text,
+        .faq-answer .faq-a-text {
+            display: inline;
         }
     </style>
 </head>
@@ -604,7 +609,6 @@
             <li><a onclick="navigateTo('about')" data-key="about">About</a></li>
             <li><a onclick="navigateTo('services')" data-key="services">Services</a></li>
             <li><a onclick="navigateTo('products')" data-key="products">Products</a></li>
-            <!-- Industry Dropdown -->
             <li class="dropdown-industry">
                 <button class="dropbtn" data-key="industry">Industry <i class="fas fa-chevron-down" style="font-size:0.5rem;margin-left:3px;"></i></button>
                 <div class="dropdown-content">
@@ -658,83 +662,83 @@
             <p data-key="aboutSub">RANA SOLAR TRADERS — Your trusted solar partner.</p>
         </div>
         <div class="glass-card reveal" style="max-width:1100px;margin:0 auto;text-align:left;">
+            <div id="aboutContent">
+                <h3 style="color:var(--gold);font-family:'Orbitron',monospace;font-size:clamp(1.1rem,3vw,1.5rem);text-align:center;margin-bottom:1.2rem;" data-key="aboutHeading">A Reliable Journey Toward a Bright Future — Rana Solar Trader</h3>
 
-            <h3 style="color:var(--gold);font-family:'Orbitron',monospace;font-size:clamp(1.1rem,3vw,1.5rem);text-align:center;margin-bottom:1.2rem;">A Reliable Journey Toward a Bright Future — Rana Solar Trader</h3>
+                <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;" data-key="aboutP1">Rana Solar Trader has become a trusted name in the solar energy sector through reliability, quality products, honest dealings, experience, and excellent customer service.</p>
 
-            <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;">Rana Solar Trader has become a trusted name in the solar energy sector through reliability, quality products, honest dealings, experience, and excellent customer service.</p>
+                <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;margin-top:0.8rem;" data-key="aboutP2">Our journey began on <strong style="color:#fff;">November 18, 2020</strong>, in Kasur, Pakistan, when we established our first branch under the name <strong style="color:var(--gold);">Rana Solar Trader Kasur</strong>. With the trust and continued support of our valued customers, we successfully completed numerous solar projects and built a strong reputation through quality work and professional service.</p>
 
-            <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;margin-top:0.8rem;">Our journey began on <strong style="color:#fff;">November 18, 2020</strong>, in Kasur, Pakistan, when we established our first branch under the name <strong style="color:var(--gold);">Rana Solar Trader Kasur</strong>. With the trust and continued support of our valued customers, we successfully completed numerous solar projects and built a strong reputation through quality work and professional service.</p>
+                <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;margin-top:0.8rem;" data-key="aboutP3">Continuing our journey, on <strong style="color:#fff;">January 23, 2021</strong>, we established our specialized <strong style="color:var(--gold);">Rana Solar Repairing Lab Kasur</strong>, where professional repair and technical services for solar inverters and solar equipment are provided.</p>
 
-            <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;margin-top:0.8rem;">Continuing our journey, on <strong style="color:#fff;">January 23, 2021</strong>, we established our specialized <strong style="color:var(--gold);">Rana Solar Repairing Lab Kasur</strong>, where professional repair and technical services for solar inverters and solar equipment are provided.</p>
+                <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;margin-top:0.8rem;" data-key="aboutP4">On <strong style="color:#fff;">January 18, 2026</strong>, after continuous growth and earning the trust of our customers, we proudly established our third branch under the name <strong style="color:var(--gold);">Rana Solar Trader Mustafa Abad Lalian</strong>.</p>
 
-            <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;margin-top:0.8rem;">On <strong style="color:#fff;">January 18, 2026</strong>, after continuous growth and earning the trust of our customers, we proudly established our third branch under the name <strong style="color:var(--gold);">Rana Solar Trader Mustafa Abad Lalian</strong>.</p>
+                <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;margin-top:0.8rem;" data-key="aboutP5">And our journey has not stopped yet. Insha'Allah, our next goal is to establish another branch in Raiwind in 2027, so that we can provide quality and reliable solar solutions to even more customers.</p>
 
-            <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;margin-top:0.8rem;">And our journey has not stopped yet. Insha'Allah, our next goal is to establish another branch in Raiwind in 2027, so that we can provide quality and reliable solar solutions to even more customers.</p>
+                <hr style="border-color:var(--border-glass);margin:1.5rem 0;" />
 
-            <hr style="border-color:var(--border-glass);margin:1.5rem 0;" />
+                <h4 style="color:var(--gold);font-family:'Orbitron',monospace;font-size:clamp(1rem,2.5vw,1.2rem);text-align:center;margin-bottom:1rem;" data-key="aboutHeading2">Complete Solar Solutions Under One Roof</h4>
 
-            <h4 style="color:var(--gold);font-family:'Orbitron',monospace;font-size:clamp(1rem,2.5vw,1.2rem);text-align:center;margin-bottom:1rem;">Complete Solar Solutions Under One Roof</h4>
+                <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;text-align:center;margin-bottom:1rem;" data-key="aboutP6">At Rana Solar Trader, we provide A to Z solar solutions, including:</p>
 
-            <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;text-align:center;margin-bottom:1rem;">At Rana Solar Trader, we provide A to Z solar solutions, including:</p>
+                <div class="about-list-grid" style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);">
+                    <div style="color:var(--text-muted);" data-key="aboutList1"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Inverters</div>
+                    <div style="color:var(--text-muted);" data-key="aboutList2"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Lithium Batteries</div>
+                    <div style="color:var(--text-muted);" data-key="aboutList3"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Panels</div>
+                    <div style="color:var(--text-muted);" data-key="aboutList4"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Complete Solar Systems</div>
+                    <div style="color:var(--text-muted);" data-key="aboutList5"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Installation</div>
+                    <div style="color:var(--text-muted);" data-key="aboutList6"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Accessories & Essential Equipment</div>
+                    <div style="color:var(--text-muted);" data-key="aboutList7"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Inverter Repair</div>
+                    <div style="color:var(--text-muted);" data-key="aboutList8"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Panel Repair</div>
+                    <div style="color:var(--text-muted);" data-key="aboutList9"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Technical Support</div>
+                    <div style="color:var(--text-muted);" data-key="aboutList10"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Maintenance & After-Sales Service</div>
+                </div>
 
-            <div class="about-list-grid" style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);">
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Inverters</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Lithium Batteries</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Panels</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Complete Solar Systems</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Installation</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Accessories & Essential Equipment</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Inverter Repair</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Solar Panel Repair</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Technical Support</div>
-                <div style="color:var(--text-muted);"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:0.4rem;"></i> Maintenance & After-Sales Service</div>
+                <hr style="border-color:var(--border-glass);margin:1.5rem 0;" />
+
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;">
+                    <div>
+                        <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);" data-key="aboutTeam1">Experienced Solar Installation Team</h5>
+                        <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;" data-key="aboutTeam1Text">We have an experienced and skilled solar installation team that understands the technical requirements of solar systems. From system planning and installation to testing and final setup, our team focuses on professional workmanship, safety, and the best possible system performance.</p>
+                    </div>
+                    <div>
+                        <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);" data-key="aboutTeam2">Expert Solar Inverter Repairing Team</h5>
+                        <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;" data-key="aboutTeam2Text">Our own repairing lab has experienced solar inverter repair masters and skilled technicians with practical experience in fault diagnosis, troubleshooting, testing, and repairing solar inverters. Rather than focusing only on temporary solutions, we emphasize proper fault diagnosis and professional repair, helping our customers receive reliable and long-lasting technical service.</p>
+                    </div>
+                    <div>
+                        <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);" data-key="aboutTeam3">Professional Sales & Dealing Team</h5>
+                        <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;" data-key="aboutTeam3Text">We also have an experienced sales and dealing team that understands each customer's requirements, system capacity, budget, and usage before recommending the right solar solution. We believe that honest advice is the foundation of a long-term customer relationship.</p>
+                    </div>
+                </div>
+
+                <hr style="border-color:var(--border-glass);margin:1.5rem 0;" />
+
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;">
+                    <div>
+                        <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);" data-key="aboutPrice">Reasonable & Fair Prices</h5>
+                        <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;" data-key="aboutPriceText">One of the major reasons our customers trust us is our reasonable and fair pricing. We continuously monitor market rates and source products from reliable suppliers and other market dealers at reasonable and competitive prices, allowing us to provide quality products to our customers at fair market rates. We believe in transparent and honest dealings — the right product, the right price, and the right guidance. Our goal is not simply to sell products at the lowest possible price. Our goal is to provide our customers with the best overall value, combining quality products, reasonable prices, professional installation, expert repair, and reliable after-sales support.</p>
+                    </div>
+                    <div>
+                        <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);" data-key="aboutVertron">VERTRON Service Center</h5>
+                        <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;" data-key="aboutVertronText">We also provide a dedicated service center facility for VERTRON Solar Inverters, where customers can receive professional technical support, inverter repair, and after-sales service.</p>
+                    </div>
+                    <div>
+                        <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);" data-key="aboutTrust">Why Do Our Customers Trust Us?</h5>
+                        <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;" data-key="aboutTrustText">For us, business is not simply about selling products; it is about building lasting trust and relationships. We strive to provide every customer with: Honest Dealing • Reasonable Prices • Quality Products • Professional Installation • Expert Repair • Reliable Service. For us, the sale of a product is not the end of our responsibility; rather, it is the beginning of a long-term relationship with our customer.</p>
+                    </div>
+                </div>
+
+                <hr style="border-color:var(--border-glass);margin:1.5rem 0;" />
+
+                <div style="text-align:center;">
+                    <h4 style="color:var(--gold);font-family:'Orbitron',monospace;font-size:clamp(1.1rem,2.5vw,1.3rem);" data-key="aboutMission">Our Mission</h4>
+                    <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;max-width:800px;margin:0.8rem auto;" data-key="aboutMissionText">The journey that began with our first branch in Kasur has now grown into a business offering multiple services and branches. Alhamdulillah, Rana Solar Trader is now working as a complete solar solution provider, offering sales, installation, repair, technical support, maintenance, and after-sales services under one roof. We are sincerely grateful to every customer who has supported us throughout our journey and placed their trust in us.</p>
+                    <p style="color:#fff;font-size:clamp(0.95rem,2vw,1.1rem);font-weight:600;margin-top:0.8rem;" data-key="aboutMissionQuote">Your Trust Is Our Greatest Achievement, and Your Satisfaction Is Our Highest Priority.</p>
+                    <p style="color:var(--gold);font-size:clamp(1rem,2.5vw,1.2rem);font-weight:700;margin-top:1.2rem;" data-key="aboutName">Rana Solar Trader</p>
+                    <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);" data-key="aboutFooter">Your Trusted Partner for Complete Solar Solutions<br />Quality Products • Reasonable Prices • Expert Service • Honest Dealing • Long-Term Trust</p>
+                    <p style="color:var(--gold);font-weight:600;margin-top:0.8rem;font-size:clamp(0.85rem,2vw,1rem);" data-key="aboutEnd">Insha'Allah, this journey will continue to move forward with the same trust and commitment.</p>
+                </div>
             </div>
-
-            <hr style="border-color:var(--border-glass);margin:1.5rem 0;" />
-
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;">
-                <div>
-                    <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);">Experienced Solar Installation Team</h5>
-                    <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;">We have an experienced and skilled solar installation team that understands the technical requirements of solar systems. From system planning and installation to testing and final setup, our team focuses on professional workmanship, safety, and the best possible system performance.</p>
-                </div>
-                <div>
-                    <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);">Expert Solar Inverter Repairing Team</h5>
-                    <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;">Our own repairing lab has experienced solar inverter repair masters and skilled technicians with practical experience in fault diagnosis, troubleshooting, testing, and repairing solar inverters. Rather than focusing only on temporary solutions, we emphasize proper fault diagnosis and professional repair, helping our customers receive reliable and long-lasting technical service.</p>
-                </div>
-                <div>
-                    <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);">Professional Sales & Dealing Team</h5>
-                    <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;">We also have an experienced sales and dealing team that understands each customer's requirements, system capacity, budget, and usage before recommending the right solar solution. We believe that honest advice is the foundation of a long-term customer relationship.</p>
-                </div>
-            </div>
-
-            <hr style="border-color:var(--border-glass);margin:1.5rem 0;" />
-
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;">
-                <div>
-                    <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);">Reasonable & Fair Prices</h5>
-                    <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;">One of the major reasons our customers trust us is our reasonable and fair pricing. We continuously monitor market rates and source products from reliable suppliers and other market dealers at reasonable and competitive prices, allowing us to provide quality products to our customers at fair market rates. We believe in transparent and honest dealings — the right product, the right price, and the right guidance. Our goal is not simply to sell products at the lowest possible price. Our goal is to provide our customers with the best overall value, combining quality products, reasonable prices, professional installation, expert repair, and reliable after-sales support.</p>
-                </div>
-                <div>
-                    <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);">VERTRON Service Center</h5>
-                    <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;">We also provide a dedicated service center facility for VERTRON Solar Inverters, where customers can receive professional technical support, inverter repair, and after-sales service.</p>
-                </div>
-                <div>
-                    <h5 style="color:var(--gold);font-weight:700;font-size:clamp(0.9rem,2vw,1rem);">Why Do Our Customers Trust Us?</h5>
-                    <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);line-height:1.7;">For us, business is not simply about selling products; it is about building lasting trust and relationships. We strive to provide every customer with: Honest Dealing • Reasonable Prices • Quality Products • Professional Installation • Expert Repair • Reliable Service. For us, the sale of a product is not the end of our responsibility; rather, it is the beginning of a long-term relationship with our customer.</p>
-                </div>
-            </div>
-
-            <hr style="border-color:var(--border-glass);margin:1.5rem 0;" />
-
-            <div style="text-align:center;">
-                <h4 style="color:var(--gold);font-family:'Orbitron',monospace;font-size:clamp(1.1rem,2.5vw,1.3rem);">Our Mission</h4>
-                <p style="color:var(--text-muted);font-size:clamp(0.85rem,2vw,1rem);line-height:1.8;max-width:800px;margin:0.8rem auto;">The journey that began with our first branch in Kasur has now grown into a business offering multiple services and branches. Alhamdulillah, Rana Solar Trader is now working as a complete solar solution provider, offering sales, installation, repair, technical support, maintenance, and after-sales services under one roof. We are sincerely grateful to every customer who has supported us throughout our journey and placed their trust in us.</p>
-                <p style="color:#fff;font-size:clamp(0.95rem,2vw,1.1rem);font-weight:600;margin-top:0.8rem;">Your Trust Is Our Greatest Achievement, and Your Satisfaction Is Our Highest Priority.</p>
-                <p style="color:var(--gold);font-size:clamp(1rem,2.5vw,1.2rem);font-weight:700;margin-top:1.2rem;">Rana Solar Trader</p>
-                <p style="color:var(--text-muted);font-size:clamp(0.8rem,1.8vw,0.95rem);">Your Trusted Partner for Complete Solar Solutions<br />Quality Products • Reasonable Prices • Expert Service • Honest Dealing • Long-Term Trust</p>
-                <p style="color:var(--gold);font-weight:600;margin-top:0.8rem;font-size:clamp(0.85rem,2vw,1rem);">Insha'Allah, this journey will continue to move forward with the same trust and commitment.</p>
-            </div>
-
         </div>
     </section>
 
@@ -746,7 +750,6 @@
             <p data-key="branchesSub">Three convenient locations to serve you better.</p>
         </div>
         <div class="branch-grid">
-            <!-- Branch 1 -->
             <div class="glass-card reveal">
                 <div class="branch-icon"><i class="fas fa-store-alt"></i></div>
                 <h3>RANA SOLAR TRADERS KASUR</h3>
@@ -767,7 +770,6 @@
                 <div style="margin-top:0.6rem;color:var(--text-muted);font-size:0.8rem;"><i class="far fa-clock"></i> Mon-Sun 9AM-7PM (Fri Off)</div>
                 <div class="branch-map"><a href="https://maps.app.goo.gl/dsBdH9LWPDAk2yHn8?g_st=awb" target="_blank"><i class="fas fa-map-marked-alt"></i> Get Location</a></div>
             </div>
-            <!-- Branch 2 -->
             <div class="glass-card reveal">
                 <div class="branch-icon"><i class="fas fa-microscope"></i></div>
                 <h3>RANA SOLAR INVERTER REPAIRING LAB</h3>
@@ -788,7 +790,6 @@
                 <div style="margin-top:0.6rem;color:var(--text-muted);font-size:0.8rem;"><i class="far fa-clock"></i> Mon-Sun 9AM-7PM (Fri Off)</div>
                 <div class="branch-map"><a href="https://maps.app.goo.gl/SyVqXZg3g1GFqoaDA?g_st=awb" target="_blank"><i class="fas fa-map-marked-alt"></i> Get Location</a></div>
             </div>
-            <!-- Branch 3 -->
             <div class="glass-card reveal">
                 <div class="branch-icon"><i class="fas fa-store-alt"></i></div>
                 <h3>RANA SOLAR TRADERS MUSTAFA ABAD LALYANI</h3>
@@ -820,12 +821,42 @@
             <p data-key="servicesSub">Professional solar solutions — from repairs to NRE claims.</p>
         </div>
         <div class="category-grid">
-            <div class="glass-card reveal"><div class="icon"><i class="fas fa-microchip"></i></div><h3>Inverter Repair</h3><p>All boards &amp; MPPTs. Expert diagnosis and repair.</p><span class="badge">Expert</span></div>
-            <div class="glass-card reveal"><div class="icon"><i class="fas fa-file-invoice"></i></div><h3>NRE Claim Center</h3><p>Official claim processing for net metering.</p><span class="badge">Authorized</span></div>
-            <div class="glass-card reveal"><div class="icon"><i class="fas fa-solar-panel"></i></div><h3>New Inverters</h3><p>INVEREX, Fronus &amp; more premium brands.</p><span class="badge">In Stock</span></div>
-            <div class="glass-card reveal"><div class="icon"><i class="fas fa-plug"></i></div><h3>Components</h3><p>IGBT, MOSFET, Opto, Coils. Genuine parts.</p><span class="badge">Original</span></div>
-            <div class="glass-card reveal"><div class="icon"><i class="fas fa-tv"></i></div><h3>Displays &amp; Fans</h3><p>New panels, fans, choppers. Quality assured.</p><span class="badge">Available</span></div>
-            <div class="glass-card reveal"><div class="icon"><i class="fas fa-tools"></i></div><h3>Solar Panels</h3><p>High‑efficiency panels for maximum output.</p><span class="badge">Premium</span></div>
+            <div class="glass-card reveal">
+                <div class="icon"><i class="fas fa-microchip"></i></div>
+                <h3 data-key="serv1">Inverter Repair</h3>
+                <p data-key="serv1d">All boards &amp; MPPTs. Expert diagnosis and repair.</p>
+                <span class="badge" data-key="serv1b">Expert</span>
+            </div>
+            <div class="glass-card reveal">
+                <div class="icon"><i class="fas fa-file-invoice"></i></div>
+                <h3 data-key="serv2">NRE Claim Center</h3>
+                <p data-key="serv2d">Official claim processing for net metering.</p>
+                <span class="badge" data-key="serv2b">Authorized</span>
+            </div>
+            <div class="glass-card reveal">
+                <div class="icon"><i class="fas fa-solar-panel"></i></div>
+                <h3 data-key="serv3">New Inverters</h3>
+                <p data-key="serv3d">INVEREX, Fronus &amp; more premium brands.</p>
+                <span class="badge" data-key="serv3b">In Stock</span>
+            </div>
+            <div class="glass-card reveal">
+                <div class="icon"><i class="fas fa-plug"></i></div>
+                <h3 data-key="serv4">Components</h3>
+                <p data-key="serv4d">IGBT, MOSFET, Opto, Coils. Genuine parts.</p>
+                <span class="badge" data-key="serv4b">Original</span>
+            </div>
+            <div class="glass-card reveal">
+                <div class="icon"><i class="fas fa-tv"></i></div>
+                <h3 data-key="serv5">Displays &amp; Fans</h3>
+                <p data-key="serv5d">New panels, fans, choppers. Quality assured.</p>
+                <span class="badge" data-key="serv5b">Available</span>
+            </div>
+            <div class="glass-card reveal">
+                <div class="icon"><i class="fas fa-tools"></i></div>
+                <h3 data-key="serv6">Solar Panels</h3>
+                <p data-key="serv6d">High‑efficiency panels for maximum output.</p>
+                <span class="badge" data-key="serv6b">Premium</span>
+            </div>
         </div>
     </section>
 
@@ -903,8 +934,8 @@
             <div class="glass-card reveal">
                 <div class="avatar"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23d4a017'/%3E%3Ctext x='50' y='55' font-family='Arial' font-size='30' fill='%230a0a0a' text-anchor='middle' dominant-baseline='central'%3EMS%3C/text%3E%3C/svg%3E" alt="RANA M.SAEED"></div>
                 <h4>RANA M.SAEED</h4>
-                <div class="role">Founder / Owner</div>
-                <div class="role-desc">Oversees all operations and manages the main branch for solar sell &amp; purchase.</div>
+                <div class="role" data-key="teamRole1">Founder / Owner</div>
+                <div class="role-desc" data-key="teamDesc1">Oversees all operations and manages the main branch for solar sell &amp; purchase.</div>
                 <div class="phone"><i class="fas fa-phone"></i> 0300-4567102</div>
                 <div class="team-socials">
                     <a href="https://wa.me/923004567102" target="_blank" class="wa-btn"><i class="fab fa-whatsapp"></i></a>
@@ -913,8 +944,8 @@
             <div class="glass-card reveal">
                 <div class="avatar"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23d4a017'/%3E%3Ctext x='50' y='55' font-family='Arial' font-size='30' fill='%230a0a0a' text-anchor='middle' dominant-baseline='central'%3ERA%3C/text%3E%3C/svg%3E" alt="RANA AHMAD"></div>
                 <h4>RANA AHMAD</h4>
-                <div class="role">Chairman · Main Contact</div>
-                <div class="role-desc">Primary point of contact. Manages the Repairing Lab and oversees all technical repairs.</div>
+                <div class="role" data-key="teamRole2">Chairman · Main Contact</div>
+                <div class="role-desc" data-key="teamDesc2">Primary point of contact. Manages the Repairing Lab and oversees all technical repairs.</div>
                 <div class="phone"><i class="fas fa-phone"></i> 0300-0041131</div>
                 <div class="team-socials">
                     <a href="https://wa.me/923000041131" target="_blank" class="wa-btn"><i class="fab fa-whatsapp"></i></a>
@@ -923,8 +954,8 @@
             <div class="glass-card reveal">
                 <div class="avatar"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23d4a017'/%3E%3Ctext x='50' y='55' font-family='Arial' font-size='30' fill='%230a0a0a' text-anchor='middle' dominant-baseline='central'%3ART%3C/text%3E%3C/svg%3E" alt="RANA TASAWAR"></div>
                 <h4>RANA TASAWAR</h4>
-                <div class="role">CEO</div>
-                <div class="role-desc">Handles strategic planning and manages the smaller solar shop for sell &amp; purchase.</div>
+                <div class="role" data-key="teamRole3">CEO</div>
+                <div class="role-desc" data-key="teamDesc3">Handles strategic planning and manages the smaller solar shop for sell &amp; purchase.</div>
                 <div class="phone"><i class="fas fa-phone"></i> 0300-0046544</div>
                 <div class="team-socials">
                     <a href="https://wa.me/923000046544" target="_blank" class="wa-btn"><i class="fab fa-whatsapp"></i></a>
@@ -933,8 +964,8 @@
             <div class="glass-card reveal">
                 <div class="avatar"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23d4a017'/%3E%3Ctext x='50' y='55' font-family='Arial' font-size='30' fill='%230a0a0a' text-anchor='middle' dominant-baseline='central'%3ARA%3C/text%3E%3C/svg%3E" alt="RANA ATEEQ"></div>
                 <h4>RANA ATEEQ</h4>
-                <div class="role">CFO</div>
-                <div class="role-desc">Manages financial operations and ensures smooth business transactions.</div>
+                <div class="role" data-key="teamRole4">CFO</div>
+                <div class="role-desc" data-key="teamDesc4">Manages financial operations and ensures smooth business transactions.</div>
                 <div class="phone"><i class="fas fa-phone"></i> 0329-0052709</div>
                 <div class="team-socials">
                     <a href="https://wa.me/923290052709" target="_blank" class="wa-btn"><i class="fab fa-whatsapp"></i></a>
@@ -943,8 +974,8 @@
             <div class="glass-card reveal">
                 <div class="avatar"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23d4a017'/%3E%3Ctext x='50' y='55' font-family='Arial' font-size='30' fill='%230a0a0a' text-anchor='middle' dominant-baseline='central'%3ARH%3C/text%3E%3C/svg%3E" alt="RANA HAMMAD"></div>
                 <h4>RANA HAMMAD</h4>
-                <div class="role">COO</div>
-                <div class="role-desc">Oversees daily operations across all branches and ensures quality control.</div>
+                <div class="role" data-key="teamRole5">COO</div>
+                <div class="role-desc" data-key="teamDesc5">Oversees daily operations across all branches and ensures quality control.</div>
                 <div class="phone"><i class="fas fa-phone"></i> 0304-4473513</div>
                 <div class="team-socials">
                     <a href="https://wa.me/923044473513" target="_blank" class="wa-btn"><i class="fab fa-whatsapp"></i></a>
@@ -963,21 +994,21 @@
         <div class="testimonial-grid">
             <div class="glass-card reveal">
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="quote">"Best solar repair service. They fixed my inverter in 2 hours! Professional and reliable."</p>
-                <div class="client">— Ahmed Ali</div>
-                <div class="client-role">Homeowner</div>
+                <p class="quote" data-key="test1">"Best solar repair service. They fixed my inverter in 2 hours! Professional and reliable."</p>
+                <div class="client" data-key="test1c">— Ahmed Ali</div>
+                <div class="client-role" data-key="test1r">Homeowner</div>
             </div>
             <div class="glass-card reveal">
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="quote">"Professional team, genuine parts. Highly recommend for NRE claims. They handled everything smoothly."</p>
-                <div class="client">— Sana Khan</div>
-                <div class="client-role">Business Owner</div>
+                <p class="quote" data-key="test2">"Professional team, genuine parts. Highly recommend for NRE claims. They handled everything smoothly."</p>
+                <div class="client" data-key="test2c">— Sana Khan</div>
+                <div class="client-role" data-key="test2r">Business Owner</div>
             </div>
             <div class="glass-card reveal">
                 <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="quote">"Excellent support and fast service. They have all the components I needed. 5 stars!"</p>
-                <div class="client">— Rizwan Bhatti</div>
-                <div class="client-role">Solar User</div>
+                <p class="quote" data-key="test3">"Excellent support and fast service. They have all the components I needed. 5 stars!"</p>
+                <div class="client" data-key="test3c">— Rizwan Bhatti</div>
+                <div class="client-role" data-key="test3r">Solar User</div>
             </div>
         </div>
     </section>
@@ -993,25 +1024,25 @@
             <div class="glass-card reveal">
                 <img src="https://placehold.co/600x400/0a0a0a/fbbf24?text=Solar+Tips" alt="Solar Tips" class="blog-img">
                 <div class="blog-body">
-                    <h4>5 Tips for Solar Maintenance</h4>
-                    <p>Keep your system running efficiently with these simple steps.</p>
-                    <a href="#">Read More →</a>
+                    <h4 data-key="blog1">5 Tips for Solar Maintenance</h4>
+                    <p data-key="blog1d">Keep your system running efficiently with these simple steps.</p>
+                    <a href="#" data-key="blog1r">Read More →</a>
                 </div>
             </div>
             <div class="glass-card reveal">
                 <img src="https://placehold.co/600x400/0a0a0a/fbbf24?text=NRE+Claim" alt="NRE Claim" class="blog-img">
                 <div class="blog-body">
-                    <h4>NRE Claim Process Simplified</h4>
-                    <p>Everything you need to know about net metering claims.</p>
-                    <a href="#">Read More →</a>
+                    <h4 data-key="blog2">NRE Claim Process Simplified</h4>
+                    <p data-key="blog2d">Everything you need to know about net metering claims.</p>
+                    <a href="#" data-key="blog2r">Read More →</a>
                 </div>
             </div>
             <div class="glass-card reveal">
                 <img src="https://placehold.co/600x400/0a0a0a/fbbf24?text=Inverter+Guide" alt="Inverter Guide" class="blog-img">
                 <div class="blog-body">
-                    <h4>Choosing the Right Inverter</h4>
-                    <p>Compare features, efficiency, and top brands.</p>
-                    <a href="#">Read More →</a>
+                    <h4 data-key="blog3">Choosing the Right Inverter</h4>
+                    <p data-key="blog3d">Compare features, efficiency, and top brands.</p>
+                    <a href="#" data-key="blog3r">Read More →</a>
                 </div>
             </div>
         </div>
@@ -1026,20 +1057,32 @@
         </div>
         <div class="faq-grid">
             <div class="faq-item reveal">
-                <button class="faq-question" onclick="toggleFaq(this)">What is NRE claim? <i class="fas fa-chevron-down"></i></button>
-                <div class="faq-answer">Net metering credit claim process for solar energy producers. We handle all documentation and submission.</div>
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-q-text" data-key="faq1q">What is NRE claim?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer"><span class="faq-a-text" data-key="faq1a">Net metering credit claim process for solar energy producers. We handle all documentation and submission.</span></div>
             </div>
             <div class="faq-item reveal">
-                <button class="faq-question" onclick="toggleFaq(this)">Do you offer warranty on repairs? <i class="fas fa-chevron-down"></i></button>
-                <div class="faq-answer">Yes, all repairs come with a 3-month warranty on parts and labor. We stand behind our work.</div>
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-q-text" data-key="faq2q">Do you offer warranty on repairs?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer"><span class="faq-a-text" data-key="faq2a">Yes, all repairs come with a 3-month warranty on parts and labor. We stand behind our work.</span></div>
             </div>
             <div class="faq-item reveal">
-                <button class="faq-question" onclick="toggleFaq(this)">What brands do you support? <i class="fas fa-chevron-down"></i></button>
-                <div class="faq-answer">We work with INVEREX, Fronus, Huawei, SUNLIFE, and all major solar brands. We stock original parts for all.</div>
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-q-text" data-key="faq3q">What brands do you support?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer"><span class="faq-a-text" data-key="faq3a">We work with INVEREX, Fronus, Huawei, SUNLIFE, and all major solar brands. We stock original parts for all.</span></div>
             </div>
             <div class="faq-item reveal">
-                <button class="faq-question" onclick="toggleFaq(this)">What are your business hours? <i class="fas fa-chevron-down"></i></button>
-                <div class="faq-answer">We are open Monday to Sunday from 9:00 AM to 7:00 PM. We are closed on Fridays.</div>
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span class="faq-q-text" data-key="faq4q">What are your business hours?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer"><span class="faq-a-text" data-key="faq4a">We are open Monday to Sunday from 9:00 AM to 7:00 PM. We are closed on Fridays.</span></div>
             </div>
         </div>
     </section>
@@ -1085,10 +1128,10 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108638.81453711894!2d74.233578!3d31.115843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391964aa4c7d6b0b%3A0x8b8b6b6b6b6b6b6b!2sKasur%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div style="margin-top:1.2rem;">
-                    <label style="font-weight:600;color:#fff;display:block;margin-bottom:0.4rem;font-size:0.95rem;">📡 Subscribe to Updates</label>
+                    <label style="font-weight:600;color:#fff;display:block;margin-bottom:0.4rem;font-size:0.95rem;" data-key="subscribeLabel">📡 Subscribe to Updates</label>
                     <div class="newsletter-box">
                         <input type="email" placeholder="Enter email" id="newsletterEmail" />
-                        <button onclick="subscribeNewsletter()"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                        <button onclick="subscribeNewsletter()"><i class="fas fa-paper-plane"></i> <span data-key="subscribeBtn">Subscribe</span></button>
                     </div>
                 </div>
             </div>
@@ -1280,27 +1323,95 @@
         revealEls.forEach(el => obs.observe(el));
 
         // ============================================================
-        //  LANGUAGE SWITCHER - FULL TRANSLATION
+        //  LANGUAGE SWITCHER - FULL 100% TRANSLATION
         // ============================================================
         const translations = {
             en: {
+                // Navbar
                 home: "Home", about: "About", services: "Services", products: "Products",
                 industry: "Industry", team: "Team", testimonials: "Testimonials",
                 blog: "Blog", faq: "FAQ", contact: "Contact",
+                // Hero
                 heroBadge: "NRE Claim Center",
                 heroTitle: "Solar Repair & Service",
-                heroSub: "RANA SOLAR TRADERS — Expert inverter repair, NRE claims, and premium solar products. 10+ years of trusted service.",
+                heroSub: "RANA SOLAR TRADERS — Expert inverter repair, NRE claims, and premium solar products. 10+ years of trusted service. We are committed to providing sustainable energy solutions with unmatched expertise and customer care.",
                 heroBtn1: "Connect Now", heroBtn2: "View Products",
                 years: "Years Experience", repairs: "Repairs", rating: "Rating", satisfaction: "Satisfaction",
+                // About
                 aboutTag: "ABOUT US", aboutSub: "RANA SOLAR TRADERS — Your trusted solar partner.",
+                aboutHeading: "A Reliable Journey Toward a Bright Future — Rana Solar Trader",
+                aboutP1: "Rana Solar Trader has become a trusted name in the solar energy sector through reliability, quality products, honest dealings, experience, and excellent customer service.",
+                aboutP2: "Our journey began on November 18, 2020, in Kasur, Pakistan, when we established our first branch under the name Rana Solar Trader Kasur. With the trust and continued support of our valued customers, we successfully completed numerous solar projects and built a strong reputation through quality work and professional service.",
+                aboutP3: "Continuing our journey, on January 23, 2021, we established our specialized Rana Solar Repairing Lab Kasur, where professional repair and technical services for solar inverters and solar equipment are provided.",
+                aboutP4: "On January 18, 2026, after continuous growth and earning the trust of our customers, we proudly established our third branch under the name Rana Solar Trader Mustafa Abad Lalian.",
+                aboutP5: "And our journey has not stopped yet. Insha'Allah, our next goal is to establish another branch in Raiwind in 2027, so that we can provide quality and reliable solar solutions to even more customers.",
+                aboutHeading2: "Complete Solar Solutions Under One Roof",
+                aboutP6: "At Rana Solar Trader, we provide A to Z solar solutions, including:",
+                aboutList1: "Solar Inverters", aboutList2: "Lithium Batteries", aboutList3: "Solar Panels",
+                aboutList4: "Complete Solar Systems", aboutList5: "Solar Installation",
+                aboutList6: "Solar Accessories & Essential Equipment", aboutList7: "Solar Inverter Repair",
+                aboutList8: "Solar Panel Repair", aboutList9: "Technical Support",
+                aboutList10: "Maintenance & After-Sales Service",
+                aboutTeam1: "Experienced Solar Installation Team",
+                aboutTeam1Text: "We have an experienced and skilled solar installation team that understands the technical requirements of solar systems. From system planning and installation to testing and final setup, our team focuses on professional workmanship, safety, and the best possible system performance.",
+                aboutTeam2: "Expert Solar Inverter Repairing Team",
+                aboutTeam2Text: "Our own repairing lab has experienced solar inverter repair masters and skilled technicians with practical experience in fault diagnosis, troubleshooting, testing, and repairing solar inverters. Rather than focusing only on temporary solutions, we emphasize proper fault diagnosis and professional repair, helping our customers receive reliable and long-lasting technical service.",
+                aboutTeam3: "Professional Sales & Dealing Team",
+                aboutTeam3Text: "We also have an experienced sales and dealing team that understands each customer's requirements, system capacity, budget, and usage before recommending the right solar solution. We believe that honest advice is the foundation of a long-term customer relationship.",
+                aboutPrice: "Reasonable & Fair Prices",
+                aboutPriceText: "One of the major reasons our customers trust us is our reasonable and fair pricing. We continuously monitor market rates and source products from reliable suppliers and other market dealers at reasonable and competitive prices, allowing us to provide quality products to our customers at fair market rates. We believe in transparent and honest dealings — the right product, the right price, and the right guidance. Our goal is not simply to sell products at the lowest possible price. Our goal is to provide our customers with the best overall value, combining quality products, reasonable prices, professional installation, expert repair, and reliable after-sales support.",
+                aboutVertron: "VERTRON Service Center",
+                aboutVertronText: "We also provide a dedicated service center facility for VERTRON Solar Inverters, where customers can receive professional technical support, inverter repair, and after-sales service.",
+                aboutTrust: "Why Do Our Customers Trust Us?",
+                aboutTrustText: "For us, business is not simply about selling products; it is about building lasting trust and relationships. We strive to provide every customer with: Honest Dealing • Reasonable Prices • Quality Products • Professional Installation • Expert Repair • Reliable Service. For us, the sale of a product is not the end of our responsibility; rather, it is the beginning of a long-term relationship with our customer.",
+                aboutMission: "Our Mission",
+                aboutMissionText: "The journey that began with our first branch in Kasur has now grown into a business offering multiple services and branches. Alhamdulillah, Rana Solar Trader is now working as a complete solar solution provider, offering sales, installation, repair, technical support, maintenance, and after-sales services under one roof. We are sincerely grateful to every customer who has supported us throughout our journey and placed their trust in us.",
+                aboutMissionQuote: "Your Trust Is Our Greatest Achievement, and Your Satisfaction Is Our Highest Priority.",
+                aboutName: "Rana Solar Trader",
+                aboutFooter: "Your Trusted Partner for Complete Solar Solutions\nQuality Products • Reasonable Prices • Expert Service • Honest Dealing • Long-Term Trust",
+                aboutEnd: "Insha'Allah, this journey will continue to move forward with the same trust and commitment.",
+                // Branches
                 branchesTag: "OUR BRANCHES", branchesSub: "Three convenient locations to serve you better.",
+                // Services
                 servicesTag: "SERVICES", servicesSub: "Professional solar solutions — from repairs to NRE claims.",
+                serv1: "Inverter Repair", serv1d: "All boards & MPPTs. Expert diagnosis and repair.", serv1b: "Expert",
+                serv2: "NRE Claim Center", serv2d: "Official claim processing for net metering.", serv2b: "Authorized",
+                serv3: "New Inverters", serv3d: "INVEREX, Fronus & more premium brands.", serv3b: "In Stock",
+                serv4: "Components", serv4d: "IGBT, MOSFET, Opto, Coils. Genuine parts.", serv4b: "Original",
+                serv5: "Displays & Fans", serv5d: "New panels, fans, choppers. Quality assured.", serv5b: "Available",
+                serv6: "Solar Panels", serv6d: "High‑efficiency panels for maximum output.", serv6b: "Premium",
+                // Products
                 productsTag: "INVENTORY", productsSub: "Genuine solar parts and inverters — all available in stock.",
+                // Team
                 teamTag: "OUR TEAM", teamSub: "The experts behind RANA SOLAR TRADERS.",
+                teamRole1: "Founder / Owner", teamDesc1: "Oversees all operations and manages the main branch for solar sell & purchase.",
+                teamRole2: "Chairman · Main Contact", teamDesc2: "Primary point of contact. Manages the Repairing Lab and oversees all technical repairs.",
+                teamRole3: "CEO", teamDesc3: "Handles strategic planning and manages the smaller solar shop for sell & purchase.",
+                teamRole4: "CFO", teamDesc4: "Manages financial operations and ensures smooth business transactions.",
+                teamRole5: "COO", teamDesc5: "Oversees daily operations across all branches and ensures quality control.",
+                // Testimonials
                 testTag: "FEEDBACK", testSub: "Real reviews from real customers.",
+                test1: '"Best solar repair service. They fixed my inverter in 2 hours! Professional and reliable."',
+                test1c: "— Ahmed Ali", test1r: "Homeowner",
+                test2: '"Professional team, genuine parts. Highly recommend for NRE claims. They handled everything smoothly."',
+                test2c: "— Sana Khan", test2r: "Business Owner",
+                test3: '"Excellent support and fast service. They have all the components I needed. 5 stars!"',
+                test3c: "— Rizwan Bhatti", test3r: "Solar User",
+                // Blog
                 blogTag: "UPDATES", blogSub: "Stay updated with solar news and tips.",
+                blog1: "5 Tips for Solar Maintenance", blog1d: "Keep your system running efficiently with these simple steps.", blog1r: "Read More →",
+                blog2: "NRE Claim Process Simplified", blog2d: "Everything you need to know about net metering claims.", blog2r: "Read More →",
+                blog3: "Choosing the Right Inverter", blog3d: "Compare features, efficiency, and top brands.", blog3r: "Read More →",
+                // FAQ
                 faqTag: "HELP CENTER", faqSub: "Quick answers to common questions.",
+                faq1q: "What is NRE claim?", faq1a: "Net metering credit claim process for solar energy producers. We handle all documentation and submission.",
+                faq2q: "Do you offer warranty on repairs?", faq2a: "Yes, all repairs come with a 3-month warranty on parts and labor. We stand behind our work.",
+                faq3q: "What brands do you support?", faq3a: "We work with INVEREX, Fronus, Huawei, SUNLIFE, and all major solar brands. We stock original parts for all.",
+                faq4q: "What are your business hours?", faq4a: "We are open Monday to Sunday from 9:00 AM to 7:00 PM. We are closed on Fridays.",
+                // Contact
                 contactTag: "CONTACT", contactSub: "Send a message — we'll respond in light‑speed.",
+                subscribeLabel: "📡 Subscribe to Updates", subscribeBtn: "Subscribe",
+                // Footer
                 rights: "All rights reserved.", powered: "Powered by", protected: "Protected · 3D Experience",
                 privacy: "Privacy Policy", terms: "Terms of Service", cookie: "Cookie Policy", disclaimer: "Disclaimer"
             },
@@ -1310,18 +1421,74 @@
                 blog: "بلاگ", faq: "سوالات", contact: "رابطہ کریں",
                 heroBadge: "این آر ای کلیم سینٹر",
                 heroTitle: "سولر مرمت اور سروس",
-                heroSub: "رانا سولر ٹریڈرز — ماہر انورٹر مرمت، این آر ای کلیمز، اور پریمیم سولر مصنوعات۔ 10+ سال کی قابل اعتماد سروس۔",
+                heroSub: "رانا سولر ٹریڈرز — ماہر انورٹر مرمت، این آر ای کلیمز، اور پریمیم سولر مصنوعات۔ 10+ سال کی قابل اعتماد سروس۔ ہم اپنی بے مثال مہارت اور کسٹمر کیئر کے ساتھ پائیدار توانائی کے حل فراہم کرنے کے لیے پرعزم ہیں۔",
                 heroBtn1: "ابھی رابطہ کریں", heroBtn2: "مصنوعات دیکھیں",
                 years: "سال کا تجربہ", repairs: "مرمت", rating: "درجہ بندی", satisfaction: "اطمینان",
                 aboutTag: "ہمارے بارے میں", aboutSub: "رانا سولر ٹریڈرز — آپ کا قابل اعتماد سولر پارٹنر۔",
+                aboutHeading: "روشن مستقبل کی طرف ایک قابل اعتماد سفر — رانا سولر ٹریڈر",
+                aboutP1: "رانا سولر ٹریڈر نے قابل اعتمادی، معیاری مصنوعات، ایمانداری، تجربہ اور بہترین کسٹمر سروس کے ذریعے سولر انرجی سیکٹر میں ایک قابل اعتماد نام بنا لیا ہے۔",
+                aboutP2: "ہمارا سفر 18 نومبر 2020 کو قصور، پاکستان میں شروع ہوا، جب ہم نے رانا سولر ٹریڈر قصور کے نام سے اپنی پہلی شاخ قائم کی۔ اپنے قیمتی صارفین کے اعتماد اور مسلسل تعاون سے، ہم نے متعدد سولر پروجیکٹس کامیابی سے مکمل کیے اور معیاری کام اور پیشہ ورانہ سروس کے ذریعے ایک مضبوط شہرت بنائی۔",
+                aboutP3: "اپنے سفر کو جاری رکھتے ہوئے، 23 جنوری 2021 کو، ہم نے اپنی خصوصی رانا سولر ریپیئرنگ لیب قصور قائم کی، جہاں سولر انورٹرز اور سولر آلات کی پیشہ ورانہ مرمت اور تکنیکی خدمات فراہم کی جاتی ہیں۔",
+                aboutP4: "18 جنوری 2026 کو، مسلسل ترقی اور اپنے صارفین کا اعتماد حاصل کرنے کے بعد، ہم نے رانا سولر ٹریڈر مصطفیٰ آباد لالیاں کے نام سے اپنی تیسری شاخ قائم کی۔",
+                aboutP5: "اور ہمارا سفر ابھی رکا نہیں ہے۔ انشاء اللہ، ہمارا اگلا ہدف 2027 میں رائے ونڈ میں ایک اور شاخ قائم کرنا ہے، تاکہ ہم مزید صارفین کو معیاری اور قابل اعتماد سولر حل فراہم کر سکیں۔",
+                aboutHeading2: "ایک چھت کے نیچے مکمل سولر حل",
+                aboutP6: "رانا سولر ٹریڈر میں، ہم اے ٹو زیڈ سولر حل فراہم کرتے ہیں، بشمول:",
+                aboutList1: "سولر انورٹرز", aboutList2: "لیتھیم بیٹریاں", aboutList3: "سولر پینلز",
+                aboutList4: "مکمل سولر سسٹمز", aboutList5: "سولر تنصیب",
+                aboutList6: "سولر لوازمات اور ضروری آلات", aboutList7: "سولر انورٹر مرمت",
+                aboutList8: "سولر پینل مرمت", aboutList9: "تکنیکی معاونت",
+                aboutList10: "بحالی اور فروخت کے بعد سروس",
+                aboutTeam1: "تجربہ کار سولر تنصیب ٹیم",
+                aboutTeam1Text: "ہمارے پاس ایک تجربہ کار اور ہنرمند سولر تنصیب ٹیم ہے جو سولر سسٹمز کی تکنیکی ضروریات کو سمجھتی ہے۔ سسٹم کی منصوبہ بندی اور تنصیب سے لے کر جانچ اور حتمی سیٹ اپ تک، ہماری ٹیم پیشہ ورانہ مہارت، حفاظت، اور بہترین ممکنہ سسٹم کی کارکردگی پر توجہ مرکوز کرتی ہے۔",
+                aboutTeam2: "ماہر سولر انورٹر مرمت ٹیم",
+                aboutTeam2Text: "ہماری اپنی ریپیئرنگ لیب میں تجربہ کار سولر انورٹر مرمت کے ماہرین اور ہنرمند ٹیکنیشنز ہیں جن کے پاس فالٹ ڈائیگنوسس، ٹربل شوٹنگ، ٹیسٹنگ اور سولر انورٹرز کی مرمت میں عملی تجربہ ہے۔ عارضی حل پر توجہ مرکوز کرنے کے بجائے، ہم مناسب فالٹ ڈائیگنوسس اور پیشہ ورانہ مرمت پر زور دیتے ہیں، جس سے ہمارے صارفین کو قابل اعتماد اور دیرپا تکنیکی سروس ملتی ہے۔",
+                aboutTeam3: "پیشہ ور سیلز اور ڈیلنگ ٹیم",
+                aboutTeam3Text: "ہمارے پاس ایک تجربہ کار سیلز اور ڈیلنگ ٹیم بھی ہے جو صحیح سولر حل کی سفارش کرنے سے پہلے ہر صارف کی ضروریات، سسٹم کی گنجائش، بجٹ اور استعمال کو سمجھتی ہے۔ ہم سمجھتے ہیں کہ ایماندارانہ مشورہ طویل مدتی کسٹمر تعلقات کی بنیاد ہے۔",
+                aboutPrice: "مناسب اور منصفانہ قیمتیں",
+                aboutPriceText: "ہمارے صارفین کے ہم پر اعتماد کرنے کی ایک بڑی وجہ ہماری مناسب اور منصفانہ قیمتیں ہیں۔ ہم مسلسل مارکیٹ ریٹس کی نگرانی کرتے ہیں اور قابل اعتماد سپلائرز اور دیگر مارکیٹ ڈیلرز سے مناسب اور مسابقتی قیمتوں پر مصنوعات حاصل کرتے ہیں، جس سے ہم اپنے صارفین کو منصفانہ مارکیٹ ریٹس پر معیاری مصنوعات فراہم کر سکتے ہیں۔ ہم شفاف اور ایماندارانہ معاملات پر یقین رکھتے ہیں — صحیح مصنوعات، صحیح قیمت، اور صحیح رہنمائی۔",
+                aboutVertron: "ورٹرون سروس سینٹر",
+                aboutVertronText: "ہم ورٹرون سولر انورٹرز کے لیے ایک وقف سروس سینٹر سہولت بھی فراہم کرتے ہیں، جہاں صارفین پیشہ ورانہ تکنیکی معاونت، انورٹر مرمت، اور فروخت کے بعد سروس حاصل کر سکتے ہیں۔",
+                aboutTrust: "ہمارے صارفین ہم پر کیوں اعتماد کرتے ہیں؟",
+                aboutTrustText: "ہمارے لیے، کاروبار محض مصنوعات بیچنا نہیں ہے؛ یہ دیرپا اعتماد اور تعلقات استوار کرنے کے بارے میں ہے۔ ہم ہر صارف کو فراہم کرنے کی کوشش کرتے ہیں: ایماندارانہ معاملات • مناسب قیمتیں • معیاری مصنوعات • پیشہ ورانہ تنصیب • ماہر مرمت • قابل اعتماد سروس۔ ہمارے لیے، کسی مصنوعات کی فروخت ہماری ذمہ داری کا خاتمہ نہیں ہے؛ بلکہ یہ ہمارے صارف کے ساتھ طویل مدتی تعلقات کا آغاز ہے۔",
+                aboutMission: "ہمارا مشن",
+                aboutMissionText: "وہ سفر جو قصور میں ہماری پہلی شاخ سے شروع ہوا تھا اب ایک کاروبار میں تبدیل ہو گیا ہے جو متعدد خدمات اور شاخیں پیش کرتا ہے۔ الحمداللہ، رانا سولر ٹریڈر اب ایک مکمل سولر حل فراہم کرنے والے کے طور پر کام کر رہا ہے، جو ایک چھت کے نیچے فروخت، تنصیب، مرمت، تکنیکی معاونت، بحالی، اور فروخت کے بعد خدمات پیش کرتا ہے۔ ہم ہر اس صارف کے شکرگزار ہیں جس نے ہمارے سفر میں ہماری حمایت کی اور ہم پر اعتماد کیا۔",
+                aboutMissionQuote: "آپ کا اعتماد ہماری سب سے بڑی کامیابی ہے، اور آپ کی اطمینان ہماری اولین ترجیح ہے۔",
+                aboutName: "رانا سولر ٹریڈر",
+                aboutFooter: "مکمل سولر حل کے لیے آپ کا قابل اعتماد پارٹنر\nمعیاری مصنوعات • مناسب قیمتیں • ماہر سروس • ایماندارانہ معاملات • دیرپا اعتماد",
+                aboutEnd: "انشاء اللہ، یہ سفر اسی اعتماد اور عزم کے ساتھ آگے بڑھتا رہے گا۔",
                 branchesTag: "ہماری شاخیں", branchesSub: "آپ کی بہتر خدمت کے لیے تین آسان مقامات۔",
                 servicesTag: "خدمات", servicesSub: "پیشہ ورانہ سولر حل — مرمت سے لے کر این آر ای کلیمز تک۔",
+                serv1: "انورٹر مرمت", serv1d: "تمام بورڈز اور ایم پی پی ٹی۔ ماہر تشخیص اور مرمت۔", serv1b: "ماہر",
+                serv2: "این آر ای کلیم سینٹر", serv2d: "نیٹ میٹرنگ کے لیے سرکاری کلیم پروسیسنگ۔", serv2b: "مستند",
+                serv3: "نئے انورٹرز", serv3d: "انویریکس، فرونس اور مزید پریمیم برانڈز۔", serv3b: "اسٹاک میں",
+                serv4: "اجزاء", serv4d: "آئی جی بی ٹی، ایم او ایس ایف ای ٹی، اپٹو، کوائلز۔ اصلی پرزے۔", serv4b: "اصلی",
+                serv5: "ڈسپلے اور پنکھے", serv5d: "نئے پینل، پنکھے، چوپر۔ معیار یقینی۔", serv5b: "دستیاب",
+                serv6: "سولر پینلز", serv6d: "زیادہ سے زیادہ پیداوار کے لیے اعلیٰ کارکردگی والے پینلز۔", serv6b: "پریمیم",
                 productsTag: "انوینٹری", productsSub: "حقیقی سولر پرزے اور انورٹرز — تمام اسٹاک میں دستیاب ہیں۔",
                 teamTag: "ہماری ٹیم", teamSub: "رانا سولر ٹریڈرز کے پیچھے ماہرین۔",
+                teamRole1: "بانی / مالک", teamDesc1: "تمام آپریشنز کی نگرانی کرتا ہے اور سولر سیل اور خریداری کے لیے مرکزی برانچ کا انتظام کرتا ہے۔",
+                teamRole2: "چیئرمین · مرکزی رابطہ", teamDesc2: "رابطہ کا بنیادی نقطہ۔ ریپیئرنگ لیب کا انتظام کرتا ہے اور تمام تکنیکی مرمت کی نگرانی کرتا ہے۔",
+                teamRole3: "سی ای او", teamDesc3: "اسٹریٹجک پلاننگ کو سنبھالتا ہے اور سیل اور خریداری کے لیے چھوٹے سولر شاپ کا انتظام کرتا ہے۔",
+                teamRole4: "سی ایف او", teamDesc4: "مالی آپریشنز کا انتظام کرتا ہے اور ہموار کاروباری لین دین کو یقینی بناتا ہے۔",
+                teamRole5: "سی او او", teamDesc5: "تمام شاخوں میں روزانہ کے آپریشنز کی نگرانی کرتا ہے اور کوالٹی کنٹرول کو یقینی بناتا ہے۔",
                 testTag: "آراء", testSub: "حقیقی صارفین کے حقیقی جائزے۔",
+                test1: '"بہترین سولر مرمت سروس۔ انہوں نے میرے انورٹر کو 2 گھنٹے میں ٹھیک کر دیا! پیشہ ور اور قابل اعتماد۔"',
+                test1c: "— احمد علی", test1r: "گھر کے مالک",
+                test2: '"پیشہ ور ٹیم، اصلی پرزے۔ این آر ای کلیمز کے لیے انتہائی سفارش کی جاتی ہے۔ انہوں نے سب کچھ آسانی سے سنبھال لیا۔"',
+                test2c: "— ثناء خان", test2r: "کاروباری مالک",
+                test3: '"بہترین سپورٹ اور تیز سروس۔ ان کے پاس وہ تمام اجزاء ہیں جن کی مجھے ضرورت تھی۔ 5 ستارے!"',
+                test3c: "— رضوان بھٹی", test3r: "سولر صارف",
                 blogTag: "تازہ ترین", blogSub: "سولر نیوز اور ٹپس کے ساتھ اپ ڈیٹ رہیں۔",
+                blog1: "سولر مینٹیننس کے 5 نکات", blog1d: "ان آسان اقدامات کے ساتھ اپنے سسٹم کو موثر طریقے سے چلائیں۔", blog1r: "مزید پڑھیں →",
+                blog2: "این آر ای کلیم کا عمل آسان", blog2d: "نیٹ میٹرنگ کلیمز کے بارے میں وہ سب کچھ جو آپ کو جاننا چاہیے۔", blog2r: "مزید پڑھیں →",
+                blog3: "صحیح انورٹر کا انتخاب", blog3d: "خصوصیات، کارکردگی اور اعلیٰ برانڈز کا موازنہ کریں۔", blog3r: "مزید پڑھیں →",
                 faqTag: "مدد", faqSub: "عام سوالات کے فوری جوابات۔",
+                faq1q: "این آر ای کلیم کیا ہے؟", faq1a: "سولر انرجی پروڈیوسرز کے لیے نیٹ میٹرنگ کریڈٹ کلیم کا عمل۔ ہم تمام دستاویزات اور جمع کروانے کو سنبھالتے ہیں۔",
+                faq2q: "کیا آپ مرمت پر وارنٹی دیتے ہیں؟", faq2a: "جی ہاں، تمام مرمت پر پرزے اور لیبر کی 3 ماہ کی وارنٹی ہوتی ہے۔ ہم اپنے کام کے پیچھے کھڑے ہیں۔",
+                faq3q: "آپ کون سے برانڈز کو سپورٹ کرتے ہیں؟", faq3a: "ہم انویریکس، فرونس، ہواوے، سن لائف، اور تمام بڑے سولر برانڈز کے ساتھ کام کرتے ہیں۔ ہم سب کے لیے اصلی پرزے اسٹاک کرتے ہیں۔",
+                faq4q: "آپ کے کاروباری اوقات کیا ہیں؟", faq4a: "ہم پیر سے اتوار صبح 9:00 بجے سے شام 7:00 بجے تک کھلے رہتے ہیں۔ ہم جمعہ کو بند رہتے ہیں۔",
                 contactTag: "رابطہ", contactSub: "پیغام بھیجیں — ہم جلد جواب دیں گے۔",
+                subscribeLabel: "📡 اپ ڈیٹس کے لیے سبسکرائب کریں", subscribeBtn: "سبسکرائب کریں",
                 rights: "جملہ حقوق محفوظ ہیں۔", powered: "تقویت یافتہ", protected: "محفوظ · 3D تجربہ",
                 privacy: "رازداری کی پالیسی", terms: "خدمات کی شرائط", cookie: "کوکی پالیسی", disclaimer: "ڈس کلیمر"
             },
@@ -1331,18 +1498,74 @@
                 blog: "博客", faq: "常见问题", contact: "联系我们",
                 heroBadge: "NRE 索赔中心",
                 heroTitle: "太阳能维修与服务",
-                heroSub: "RANA SOLAR TRADERS — 专业的逆变器维修、NRE 索赔和优质太阳能产品。10 多年值得信赖的服务。",
+                heroSub: "RANA SOLAR TRADERS — 专业的逆变器维修、NRE 索赔和优质太阳能产品。10 多年值得信赖的服务。我们致力于以无与伦比的专业知识和客户关怀提供可持续的能源解决方案。",
                 heroBtn1: "立即联系", heroBtn2: "查看产品",
                 years: "年经验", repairs: "维修", rating: "评分", satisfaction: "满意度",
                 aboutTag: "关于我们", aboutSub: "RANA SOLAR TRADERS — 您值得信赖的太阳能合作伙伴。",
+                aboutHeading: "通往光明未来的可靠旅程 — Rana Solar Trader",
+                aboutP1: "Rana Solar Trader 通过可靠性、优质产品、诚实交易、经验和卓越的客户服务，成为太阳能行业值得信赖的品牌。",
+                aboutP2: "我们的旅程始于 2020 年 11 月 18 日，在巴基斯坦卡苏尔，我们以 Rana Solar Trader Kasur 的名义建立了第一家分店。在客户的信任和持续支持下，我们成功完成了众多太阳能项目，并通过优质工作和专业服务建立了良好的声誉。",
+                aboutP3: "继续我们的旅程，2021 年 1 月 23 日，我们建立了专业的 Rana Solar Repairing Lab Kasur，提供太阳能逆变器和太阳能设备的专业维修和技术服务。",
+                aboutP4: "2026 年 1 月 18 日，在持续发展和赢得客户信任后，我们以 Rana Solar Trader Mustafa Abad Lalian 的名义自豪地建立了第三家分店。",
+                aboutP5: "我们的旅程还没有停止。如果真主愿意，我们的下一个目标是在 2027 年在 Raiwind 建立另一家分店，以便为更多客户提供优质可靠的太阳能解决方案。",
+                aboutHeading2: "一站式完整太阳能解决方案",
+                aboutP6: "在 Rana Solar Trader，我们提供从 A 到 Z 的太阳能解决方案，包括：",
+                aboutList1: "太阳能逆变器", aboutList2: "锂电池", aboutList3: "太阳能板",
+                aboutList4: "完整太阳能系统", aboutList5: "太阳能安装",
+                aboutList6: "太阳能配件和必要设备", aboutList7: "太阳能逆变器维修",
+                aboutList8: "太阳能板维修", aboutList9: "技术支持",
+                aboutList10: "维护和售后服务",
+                aboutTeam1: "经验丰富的太阳能安装团队",
+                aboutTeam1Text: "我们拥有一支经验丰富、技术精湛的太阳能安装团队，了解太阳能系统的技术要求。从系统规划和安装到测试和最终设置，我们的团队专注于专业工艺、安全和最佳系统性能。",
+                aboutTeam2: "专业的太阳能逆变器维修团队",
+                aboutTeam2Text: "我们自己的维修实验室拥有经验丰富的太阳能逆变器维修大师和技术人员，在故障诊断、故障排除、测试和维修太阳能逆变器方面具有实践经验。我们不只关注临时解决方案，而是强调正确的故障诊断和专业维修，帮助客户获得可靠和持久的技术服务。",
+                aboutTeam3: "专业的销售和交易团队",
+                aboutTeam3Text: "我们还拥有一支经验丰富的销售和交易团队，在推荐正确的太阳能解决方案之前，了解每个客户的需求、系统容量、预算和使用情况。我们相信诚实的建议是长期客户关系的基础。",
+                aboutPrice: "合理公平的价格",
+                aboutPriceText: "客户信任我们的主要原因之一是我们合理公平的定价。我们持续监控市场价格，从可靠的供应商和其他市场经销商处采购合理且具有竞争力的价格的产品，使我们能够以公平的市场价格为客户提供优质产品。我们相信透明和诚实的交易 — 正确的产品、正确的价格和正确的指导。",
+                aboutVertron: "VERTRON 服务中心",
+                aboutVertronText: "我们还为 VERTRON 太阳能逆变器提供专门的服务中心设施，客户可以获得专业的技术支持、逆变器维修和售后服务。",
+                aboutTrust: "为什么客户信任我们？",
+                aboutTrustText: "对我们来说，业务不仅仅是销售产品；而是建立持久的信任和关系。我们努力为每位客户提供：诚实交易 • 合理价格 • 优质产品 • 专业安装 • 专业维修 • 可靠服务。对我们来说，产品的销售不是我们责任的结束；而是与客户建立长期关系的开始。",
+                aboutMission: "我们的使命",
+                aboutMissionText: "始于卡苏尔第一家分店的旅程现已发展成为提供多种服务和分支机构的业务。感赞真主，Rana Solar Trader 现在是一家完整的太阳能解决方案提供商，在一个屋顶下提供销售、安装、维修、技术支持、维护和售后服务。我们衷心感谢每一位在我们的旅程中支持我们并信任我们的客户。",
+                aboutMissionQuote: "您的信任是我们最大的成就，您的满意是我们的最高优先事项。",
+                aboutName: "Rana Solar Trader",
+                aboutFooter: "完整太阳能解决方案的可靠合作伙伴\n优质产品 • 合理价格 • 专业服务 • 诚实交易 • 长期信任",
+                aboutEnd: "如果真主愿意，这段旅程将带着同样的信任和承诺继续前进。",
                 branchesTag: "我们的分店", branchesSub: "三个便利的位置为您提供更好的服务。",
                 servicesTag: "服务", servicesSub: "专业的太阳能解决方案 — 从维修到 NRE 索赔。",
+                serv1: "逆变器维修", serv1d: "所有电路板和 MPPT。专家诊断和维修。", serv1b: "专家",
+                serv2: "NRE 索赔中心", serv2d: "净计量官方索赔处理。", serv2b: "授权",
+                serv3: "新逆变器", serv3d: "INVEREX、Fronus 等优质品牌。", serv3b: "有库存",
+                serv4: "组件", serv4d: "IGBT、MOSFET、光耦、线圈。原厂零件。", serv4b: "原装",
+                serv5: "显示屏和风扇", serv5d: "新面板、风扇、斩波器。质量保证。", serv5b: "有货",
+                serv6: "太阳能板", serv6d: "高效面板，实现最大输出。", serv6b: "优质",
                 productsTag: "库存", productsSub: "正品太阳能配件和逆变器 — 均有现货。",
                 teamTag: "我们的团队", teamSub: "RANA SOLAR TRADERS 背后的专家。",
+                teamRole1: "创始人 / 所有者", teamDesc1: "监督所有运营，管理太阳能销售和购买的主分店。",
+                teamRole2: "主席 · 主要联系人", teamDesc2: "主要联系人。管理维修实验室并监督所有技术维修。",
+                teamRole3: "首席执行官", teamDesc3: "处理战略规划并管理小型太阳能商店的销售和购买。",
+                teamRole4: "首席财务官", teamDesc4: "管理财务运营并确保业务交易顺畅。",
+                teamRole5: "首席运营官", teamDesc5: "监督所有分店的日常运营并确保质量控制。",
                 testTag: "客户反馈", testSub: "真实客户的真实评价。",
+                test1: '"最好的太阳能维修服务。他们 2 小时内修好了我的逆变器！专业可靠。"',
+                test1c: "— 艾哈迈德·阿里", test1r: "房主",
+                test2: '"专业的团队，原厂零件。强烈推荐 NRE 索赔。他们处理得一切顺利。"',
+                test2c: "— 萨娜·汗", test2r: "企业主",
+                test3: '"优秀的支持和快速的服务。他们有我需要的所有组件。5 星！"',
+                test3c: "— 里兹万·巴提", test3r: "太阳能用户",
                 blogTag: "最新更新", blogSub: "随时了解太阳能新闻和技巧。",
+                blog1: "太阳能维护的 5 个技巧", blog1d: "通过这些简单的步骤让您的系统高效运行。", blog1r: "阅读更多 →",
+                blog2: "NRE 索赔流程简化", blog2d: "关于净计量索赔，您需要知道的一切。", blog2r: "阅读更多 →",
+                blog3: "选择正确的逆变器", blog3d: "比较功能、效率和顶级品牌。", blog3r: "阅读更多 →",
                 faqTag: "帮助中心", faqSub: "常见问题的快速解答。",
+                faq1q: "什么是 NRE 索赔？", faq1a: "太阳能生产商的净计量信用索赔流程。我们处理所有文件和提交。",
+                faq2q: "维修提供保修吗？", faq2a: "是的，所有维修都提供 3 个月的零件和人工保修。我们对我们的工作负责。",
+                faq3q: "你们支持哪些品牌？", faq3a: "我们与 INVEREX、Fronus、华为、SUNLIFE 和所有主要太阳能品牌合作。我们为所有品牌备有原厂零件。",
+                faq4q: "你们的营业时间是什么？", faq4a: "我们周一至周日上午 9:00 至晚上 7:00 营业。周五休息。",
                 contactTag: "联系我们", contactSub: "发送消息 — 我们会快速回复。",
+                subscribeLabel: "📡 订阅更新", subscribeBtn: "订阅",
                 rights: "保留所有权利。", powered: "技术支持", protected: "受保护 · 3D 体验",
                 privacy: "隐私政策", terms: "服务条款", cookie: "Cookie 政策", disclaimer: "免责声明"
             }
@@ -1358,7 +1581,7 @@
             const t = translations[lang];
             if (!t) return;
 
-            // Navbar links - using data-key attributes
+            // ---- NAVBAR ----
             document.querySelectorAll('.nav-links a[data-key]').forEach(el => {
                 const key = el.getAttribute('data-key');
                 if (t[key]) {
@@ -1370,7 +1593,6 @@
                     }
                 }
             });
-            // Industry dropdown button
             const dropBtn = document.querySelector('.dropdown-industry .dropbtn');
             if (dropBtn && t.industry) {
                 const icon = dropBtn.querySelector('i');
@@ -1381,21 +1603,19 @@
                 }
             }
 
-            // Hero
+            // ---- HERO ----
             document.querySelector('.hero .glow-badge[data-key]').textContent = t.heroBadge || 'NRE Claim Center';
             document.querySelector('.hero h1[data-key]').textContent = t.heroTitle || 'Solar Repair & Service';
             document.querySelector('.hero .sub-title[data-key]').textContent = t.heroSub || '';
             const heroBtns = document.querySelectorAll('.hero-buttons a');
             if (heroBtns[0]) heroBtns[0].innerHTML = '<i class="fab fa-whatsapp"></i> ' + (t.heroBtn1 || 'Connect Now');
             if (heroBtns[1]) heroBtns[1].innerHTML = '<i class="fas fa-chevron-circle-right"></i> ' + (t.heroBtn2 || 'View Products');
-
-            // Stats
             document.querySelectorAll('.hero-stats-3d .stat p').forEach((el, i) => {
                 const keys = ['years', 'repairs', 'rating', 'satisfaction'];
                 if (t[keys[i]]) el.textContent = t[keys[i]];
             });
 
-            // Section headers and tags
+            // ---- SECTION HEADERS ----
             const sectionConfigs = [
                 { id: 'section-about', tag: 'aboutTag', sub: 'aboutSub' },
                 { id: 'section-branches', tag: 'branchesTag', sub: 'branchesSub' },
@@ -1417,7 +1637,81 @@
                 }
             });
 
-            // Footer
+            // ---- ABOUT (full translation) ----
+            const aboutKeys = [
+                'aboutHeading', 'aboutP1', 'aboutP2', 'aboutP3', 'aboutP4', 'aboutP5',
+                'aboutHeading2', 'aboutP6', 'aboutList1', 'aboutList2', 'aboutList3',
+                'aboutList4', 'aboutList5', 'aboutList6', 'aboutList7', 'aboutList8',
+                'aboutList9', 'aboutList10', 'aboutTeam1', 'aboutTeam1Text', 'aboutTeam2',
+                'aboutTeam2Text', 'aboutTeam3', 'aboutTeam3Text', 'aboutPrice', 'aboutPriceText',
+                'aboutVertron', 'aboutVertronText', 'aboutTrust', 'aboutTrustText',
+                'aboutMission', 'aboutMissionText', 'aboutMissionQuote', 'aboutName',
+                'aboutFooter', 'aboutEnd'
+            ];
+            aboutKeys.forEach(key => {
+                const el = document.querySelector(`[data-key="${key}"]`);
+                if (el && t[key]) {
+                    if (key === 'aboutFooter') {
+                        el.innerHTML = t[key].replace(/\n/g, '<br />');
+                    } else {
+                        el.textContent = t[key];
+                    }
+                }
+            });
+
+            // ---- SERVICES ----
+            for (let i = 1; i <= 6; i++) {
+                const titleEl = document.querySelector(`[data-key="serv${i}"]`);
+                const descEl = document.querySelector(`[data-key="serv${i}d"]`);
+                const badgeEl = document.querySelector(`[data-key="serv${i}b"]`);
+                if (titleEl && t[`serv${i}`]) titleEl.textContent = t[`serv${i}`];
+                if (descEl && t[`serv${i}d`]) descEl.textContent = t[`serv${i}d`];
+                if (badgeEl && t[`serv${i}b`]) badgeEl.textContent = t[`serv${i}b`];
+            }
+
+            // ---- TEAM ----
+            for (let i = 1; i <= 5; i++) {
+                const roleEl = document.querySelector(`[data-key="teamRole${i}"]`);
+                const descEl = document.querySelector(`[data-key="teamDesc${i}"]`);
+                if (roleEl && t[`teamRole${i}`]) roleEl.textContent = t[`teamRole${i}`];
+                if (descEl && t[`teamDesc${i}`]) descEl.textContent = t[`teamDesc${i}`];
+            }
+
+            // ---- TESTIMONIALS ----
+            for (let i = 1; i <= 3; i++) {
+                const quoteEl = document.querySelector(`[data-key="test${i}"]`);
+                const clientEl = document.querySelector(`[data-key="test${i}c"]`);
+                const roleEl = document.querySelector(`[data-key="test${i}r"]`);
+                if (quoteEl && t[`test${i}`]) quoteEl.textContent = t[`test${i}`];
+                if (clientEl && t[`test${i}c`]) clientEl.textContent = t[`test${i}c`];
+                if (roleEl && t[`test${i}r`]) roleEl.textContent = t[`test${i}r`];
+            }
+
+            // ---- BLOG ----
+            for (let i = 1; i <= 3; i++) {
+                const titleEl = document.querySelector(`[data-key="blog${i}"]`);
+                const descEl = document.querySelector(`[data-key="blog${i}d"]`);
+                const readEl = document.querySelector(`[data-key="blog${i}r"]`);
+                if (titleEl && t[`blog${i}`]) titleEl.textContent = t[`blog${i}`];
+                if (descEl && t[`blog${i}d`]) descEl.textContent = t[`blog${i}d`];
+                if (readEl && t[`blog${i}r`]) readEl.textContent = t[`blog${i}r`];
+            }
+
+            // ---- FAQ ----
+            for (let i = 1; i <= 4; i++) {
+                const qEl = document.querySelector(`[data-key="faq${i}q"]`);
+                const aEl = document.querySelector(`[data-key="faq${i}a"]`);
+                if (qEl && t[`faq${i}q`]) qEl.textContent = t[`faq${i}q`];
+                if (aEl && t[`faq${i}a`]) aEl.textContent = t[`faq${i}a`];
+            }
+
+            // ---- CONTACT ----
+            const subLabel = document.querySelector('[data-key="subscribeLabel"]');
+            const subBtn = document.querySelector('[data-key="subscribeBtn"]');
+            if (subLabel && t.subscribeLabel) subLabel.textContent = t.subscribeLabel;
+            if (subBtn && t.subscribeBtn) subBtn.textContent = t.subscribeBtn;
+
+            // ---- FOOTER ----
             document.querySelectorAll('.footer-links a[data-key]').forEach(el => {
                 const key = el.getAttribute('data-key');
                 if (t[key]) el.textContent = t[key];
@@ -1554,13 +1848,11 @@
             const particles = new THREE.Points(pGeo, pMat);
             scene.add(particles);
 
-            let mouseX = 0,
-                mouseY = 0;
+            let mouseX = 0, mouseY = 0;
             document.addEventListener('mousemove', (e) => {
                 mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
                 mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
             });
-            // Touch support for mobile
             document.addEventListener('touchmove', (e) => {
                 const touch = e.touches[0];
                 if (touch) {
