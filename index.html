@@ -444,6 +444,41 @@
         .reveal { opacity: 0; transform: translateY(40px) scale(0.97); transition: opacity 0.8s ease, transform 0.8s ease; }
         .reveal.visible { opacity: 1; transform: translateY(0) scale(1); }
 
+        /* ===== SUCCESS MESSAGE OVERLAY ===== */
+        #success-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(16px);
+            z-index: 999999; display: none; justify-content: center; align-items: center;
+            padding: 2rem; animation: fadeIn 0.5s ease;
+        }
+        #success-overlay.show { display: flex; }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        #success-overlay .success-box {
+            background: #0d111a; border: 1px solid var(--gold); border-radius: var(--radius-xl);
+            max-width: 500px; width: 100%; padding: 3rem 2rem; text-align: center;
+            box-shadow: 0 0 80px rgba(251,191,36,0.15);
+        }
+        #success-overlay .success-box .success-icon {
+            font-size: 4rem; color: #25D366; margin-bottom: 1rem;
+        }
+        #success-overlay .success-box h2 {
+            color: var(--gold); font-family: 'Orbitron', monospace; font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        #success-overlay .success-box p {
+            color: var(--text-muted); font-size: 1rem; line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        #success-overlay .success-box .btn-close-success {
+            background: var(--gold); color: #0a0a0a; border: none;
+            padding: 0.8rem 2.5rem; border-radius: 60px; font-weight: 700;
+            font-size: 1rem; cursor: pointer; transition: 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+        #success-overlay .success-box .btn-close-success:hover {
+            transform: scale(1.05); box-shadow: 0 0 60px rgba(251,191,36,0.3);
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width:1024px){ 
             .contact-wrapper { grid-template-columns: 1fr; }
@@ -490,6 +525,8 @@
             .lang-switcher { margin-left: 0; }
             .dropdown-content { position: static; width: 100%; }
             .dropdown-industry .dropbtn { width: 100%; text-align: center; }
+            #success-overlay .success-box { padding: 2rem 1.2rem; }
+            #success-overlay .success-box h2 { font-size: 1.2rem; }
         }
         @media (max-width:480px){
             .hero-content h1 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
@@ -592,6 +629,16 @@
 
     <!-- ===== THREE.JS CANVAS ===== -->
     <canvas id="three-canvas"></canvas>
+
+    <!-- ===== SUCCESS MESSAGE OVERLAY ===== -->
+    <div id="success-overlay">
+        <div class="success-box">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h2 data-key="successTitle">✅ Message Sent!</h2>
+            <p data-key="successMsg">Thank you for contacting us. Our team will get back to you within 24 hours.</p>
+            <button class="btn-close-success" onclick="closeSuccess()" data-key="successBtn">Close</button>
+        </div>
+    </div>
 
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
@@ -1095,10 +1142,11 @@
             <p data-key="contactSub">Send a message — we'll respond in light‑speed.</p>
         </div>
         <div class="contact-wrapper">
-            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="return handleContact(event)">
+            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="d4120bf9-4e29-4f43-a48e-0dfc38fae2c2">
                 <input type="hidden" name="subject" value="New Contact Form Submission - RANA SOLAR TRADERS">
                 <input type="hidden" name="from_name" value="RANA SOLAR TRADERS Website">
+                <input type="hidden" name="redirect" value="#">
                 
                 <input type="text" name="name" placeholder="Your Name" required />
                 <input type="email" name="email" placeholder="Your Email" required />
@@ -1113,7 +1161,7 @@
                     <option>Other</option>
                 </select>
                 <textarea name="message" placeholder="Your Message..." required></textarea>
-                <button type="submit"><i class="fas fa-bolt"></i> Send Message</button>
+                <button type="submit" id="submitBtn"><i class="fas fa-bolt"></i> Send Message</button>
             </form>
             <div class="contact-info">
                 <div class="item"><i class="fas fa-phone"></i> <a href="tel:03000041131">0300-0041131</a></div>
@@ -1286,14 +1334,58 @@
         }
 
         // ============================================================
-        //  CONTACT FORM - Web3Forms
+        //  CONTACT FORM - AJAX Submit (No Page Reload)
         // ============================================================
-        function handleContact(e) {
-            setTimeout(() => {
-                alert('✅ Message sent successfully! We will respond shortly.');
-            }, 100);
-            return true;
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            const formData = new FormData(form);
+            
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                if (data.success) {
+                    // Show success overlay
+                    document.getElementById('success-overlay').classList.add('show');
+                    form.reset();
+                } else {
+                    alert('❌ Something went wrong. Please try again or contact us directly.');
+                }
+            })
+            .catch(error => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                alert('❌ Network error. Please check your connection and try again.');
+            });
+        });
+
+        // ============================================================
+        //  SUCCESS MESSAGE CLOSE
+        // ============================================================
+        function closeSuccess() {
+            document.getElementById('success-overlay').classList.remove('show');
         }
+
+        // Close success on background click
+        document.getElementById('success-overlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('show');
+            }
+        });
 
         // ============================================================
         //  NEWSLETTER
@@ -1327,17 +1419,14 @@
         // ============================================================
         const translations = {
             en: {
-                // Navbar
                 home: "Home", about: "About", services: "Services", products: "Products",
                 industry: "Industry", team: "Team", testimonials: "Testimonials",
                 blog: "Blog", faq: "FAQ", contact: "Contact",
-                // Hero
                 heroBadge: "NRE Claim Center",
                 heroTitle: "Solar Repair & Service",
                 heroSub: "RANA SOLAR TRADERS — Expert inverter repair, NRE claims, and premium solar products. 10+ years of trusted service. We are committed to providing sustainable energy solutions with unmatched expertise and customer care.",
                 heroBtn1: "Connect Now", heroBtn2: "View Products",
                 years: "Years Experience", repairs: "Repairs", rating: "Rating", satisfaction: "Satisfaction",
-                // About
                 aboutTag: "ABOUT US", aboutSub: "RANA SOLAR TRADERS — Your trusted solar partner.",
                 aboutHeading: "A Reliable Journey Toward a Bright Future — Rana Solar Trader",
                 aboutP1: "Rana Solar Trader has become a trusted name in the solar energy sector through reliability, quality products, honest dealings, experience, and excellent customer service.",
@@ -1370,9 +1459,7 @@
                 aboutName: "Rana Solar Trader",
                 aboutFooter: "Your Trusted Partner for Complete Solar Solutions\nQuality Products • Reasonable Prices • Expert Service • Honest Dealing • Long-Term Trust",
                 aboutEnd: "Insha'Allah, this journey will continue to move forward with the same trust and commitment.",
-                // Branches
                 branchesTag: "OUR BRANCHES", branchesSub: "Three convenient locations to serve you better.",
-                // Services
                 servicesTag: "SERVICES", servicesSub: "Professional solar solutions — from repairs to NRE claims.",
                 serv1: "Inverter Repair", serv1d: "All boards & MPPTs. Expert diagnosis and repair.", serv1b: "Expert",
                 serv2: "NRE Claim Center", serv2d: "Official claim processing for net metering.", serv2b: "Authorized",
@@ -1380,16 +1467,13 @@
                 serv4: "Components", serv4d: "IGBT, MOSFET, Opto, Coils. Genuine parts.", serv4b: "Original",
                 serv5: "Displays & Fans", serv5d: "New panels, fans, choppers. Quality assured.", serv5b: "Available",
                 serv6: "Solar Panels", serv6d: "High‑efficiency panels for maximum output.", serv6b: "Premium",
-                // Products
                 productsTag: "INVENTORY", productsSub: "Genuine solar parts and inverters — all available in stock.",
-                // Team
                 teamTag: "OUR TEAM", teamSub: "The experts behind RANA SOLAR TRADERS.",
                 teamRole1: "Founder / Owner", teamDesc1: "Oversees all operations and manages the main branch for solar sell & purchase.",
                 teamRole2: "Chairman · Main Contact", teamDesc2: "Primary point of contact. Manages the Repairing Lab and oversees all technical repairs.",
                 teamRole3: "CEO", teamDesc3: "Handles strategic planning and manages the smaller solar shop for sell & purchase.",
                 teamRole4: "CFO", teamDesc4: "Manages financial operations and ensures smooth business transactions.",
                 teamRole5: "COO", teamDesc5: "Oversees daily operations across all branches and ensures quality control.",
-                // Testimonials
                 testTag: "FEEDBACK", testSub: "Real reviews from real customers.",
                 test1: '"Best solar repair service. They fixed my inverter in 2 hours! Professional and reliable."',
                 test1c: "— Ahmed Ali", test1r: "Homeowner",
@@ -1397,21 +1481,20 @@
                 test2c: "— Sana Khan", test2r: "Business Owner",
                 test3: '"Excellent support and fast service. They have all the components I needed. 5 stars!"',
                 test3c: "— Rizwan Bhatti", test3r: "Solar User",
-                // Blog
                 blogTag: "UPDATES", blogSub: "Stay updated with solar news and tips.",
                 blog1: "5 Tips for Solar Maintenance", blog1d: "Keep your system running efficiently with these simple steps.", blog1r: "Read More →",
                 blog2: "NRE Claim Process Simplified", blog2d: "Everything you need to know about net metering claims.", blog2r: "Read More →",
                 blog3: "Choosing the Right Inverter", blog3d: "Compare features, efficiency, and top brands.", blog3r: "Read More →",
-                // FAQ
                 faqTag: "HELP CENTER", faqSub: "Quick answers to common questions.",
                 faq1q: "What is NRE claim?", faq1a: "Net metering credit claim process for solar energy producers. We handle all documentation and submission.",
                 faq2q: "Do you offer warranty on repairs?", faq2a: "Yes, all repairs come with a 3-month warranty on parts and labor. We stand behind our work.",
                 faq3q: "What brands do you support?", faq3a: "We work with INVEREX, Fronus, Huawei, SUNLIFE, and all major solar brands. We stock original parts for all.",
                 faq4q: "What are your business hours?", faq4a: "We are open Monday to Sunday from 9:00 AM to 7:00 PM. We are closed on Fridays.",
-                // Contact
                 contactTag: "CONTACT", contactSub: "Send a message — we'll respond in light‑speed.",
                 subscribeLabel: "📡 Subscribe to Updates", subscribeBtn: "Subscribe",
-                // Footer
+                successTitle: "✅ Message Sent!",
+                successMsg: "Thank you for contacting us. Our team will get back to you within 24 hours.",
+                successBtn: "Close",
                 rights: "All rights reserved.", powered: "Powered by", protected: "Protected · 3D Experience",
                 privacy: "Privacy Policy", terms: "Terms of Service", cookie: "Cookie Policy", disclaimer: "Disclaimer"
             },
@@ -1489,6 +1572,9 @@
                 faq4q: "آپ کے کاروباری اوقات کیا ہیں؟", faq4a: "ہم پیر سے اتوار صبح 9:00 بجے سے شام 7:00 بجے تک کھلے رہتے ہیں۔ ہم جمعہ کو بند رہتے ہیں۔",
                 contactTag: "رابطہ", contactSub: "پیغام بھیجیں — ہم جلد جواب دیں گے۔",
                 subscribeLabel: "📡 اپ ڈیٹس کے لیے سبسکرائب کریں", subscribeBtn: "سبسکرائب کریں",
+                successTitle: "✅ پیغام بھیج دیا گیا!",
+                successMsg: "ہم سے رابطہ کرنے کا شکریہ۔ ہماری ٹیم 24 گھنٹے کے اندر آپ سے رابطہ کرے گی۔",
+                successBtn: "بند کریں",
                 rights: "جملہ حقوق محفوظ ہیں۔", powered: "تقویت یافتہ", protected: "محفوظ · 3D تجربہ",
                 privacy: "رازداری کی پالیسی", terms: "خدمات کی شرائط", cookie: "کوکی پالیسی", disclaimer: "ڈس کلیمر"
             },
@@ -1566,6 +1652,9 @@
                 faq4q: "你们的营业时间是什么？", faq4a: "我们周一至周日上午 9:00 至晚上 7:00 营业。周五休息。",
                 contactTag: "联系我们", contactSub: "发送消息 — 我们会快速回复。",
                 subscribeLabel: "📡 订阅更新", subscribeBtn: "订阅",
+                successTitle: "✅ 消息已发送！",
+                successMsg: "感谢您联系我们。我们的团队将在 24 小时内与您联系。",
+                successBtn: "关闭",
                 rights: "保留所有权利。", powered: "技术支持", protected: "受保护 · 3D 体验",
                 privacy: "隐私政策", terms: "服务条款", cookie: "Cookie 政策", disclaimer: "免责声明"
             }
@@ -1710,6 +1799,14 @@
             const subBtn = document.querySelector('[data-key="subscribeBtn"]');
             if (subLabel && t.subscribeLabel) subLabel.textContent = t.subscribeLabel;
             if (subBtn && t.subscribeBtn) subBtn.textContent = t.subscribeBtn;
+
+            // ---- SUCCESS OVERLAY ----
+            const successTitle = document.querySelector('[data-key="successTitle"]');
+            const successMsg = document.querySelector('[data-key="successMsg"]');
+            const successBtn = document.querySelector('[data-key="successBtn"]');
+            if (successTitle && t.successTitle) successTitle.textContent = t.successTitle;
+            if (successMsg && t.successMsg) successMsg.textContent = t.successMsg;
+            if (successBtn && t.successBtn) successBtn.textContent = t.successBtn;
 
             // ---- FOOTER ----
             document.querySelectorAll('.footer-links a[data-key]').forEach(el => {
